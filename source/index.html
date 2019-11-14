@@ -2,35 +2,48 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <meta name="keywords" content="TODO seo">
+    <meta name="description" content="TODO seo">
   </head>
   <body class="index-page">
     <header>
-      <nav class="site-nav">
-        <ul class="site-nav__list  site-nav__list--open">
+      <nav class="site-nav  site-nav--open">
+        <ul class="site-nav__list">
           <li class="site-nav__item"><a>Главная</a></li>
           <li class="site-nav__item"><a href="photo.html">Фото и видео</a></li>
           <li class="site-nav__item"><a href="form.html">Форма Отзыва</a></li>
           <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
         </ul>
 
-        <!--  TODO тут не понял требования. В макете кнопка закрыть отдельно от гамбургера, -->
-        <!--    а в ТЗ говорится что гамбургер заменяется на крестик -->
-        <span class="site-nav__close-button">Закрыть меню сайта</span>
-        <span class="site-nav__toggler  site-nav__toggler--open">Открыть/Закрыть меню сайта</span>
+        <button type="button" class="site-nav__toggler">
+          Открыть/Закрыть меню сайта
+        </button>
 
-        <span class="site-logo">
-          <a><img src="https://via.placeholder.com/102x83" alt="City of SEDONA (LOGO)"></a>
-        </span>
+        <a class="site-logo">
+          <img src="https://via.placeholder.com/102x83" alt="City of SEDONA (LOGO)">
+        </a>
       </nav>
 
-      <div class="site-banner  site-banner--big">
-        <!-- TODO пока не понятно как делать баннер -->
-        <img class="site-banner__content" src="" alt="???">
+      <div class="site-banner-big">
+        <img src="https://via.placeholder.com/320x389"
+          class="site-banner-big__content"
+          alt="Welcome to the gorgeous Sedona! Because the Grand Canyon Sucks">
       </div>
     </header>
 
     <main>
+      <section class="index-page-intro">
+        <h1 class="index-page-intro__title">
+          СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!
+        </h1>
+
+        <p class="index-page-intro__desc">
+          Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+        </p>
+      </section>
+
       <section class="advantage  advantage--primary">
         <div class="container">
           <h2>Настоящий городок</h2>
@@ -51,26 +64,27 @@
         <div class="container">
           <div class="advantage__benefits  small-city-benefits">
             <h3 class="visually-hidden">Преимущества посещения маленького городка</h3>
+
             <ul>
               <li class="small-city-benefits__item  small-city-benefits__item--housing">
-                <div class="small-city-benefits__item-title">Жилье</div>
-                <div class="small-city-benefits__item-desc">
+                <b class="small-city-benefits__item-title">Жилье</b>
+                <p class="small-city-benefits__item-desc">
                   Рекомендуем пожить в настоящем мотеле, все как в кино!
-                </div>
+                </p>
               </li>
 
               <li class="small-city-benefits__item  small-city-benefits__item--souvenir">
-                <div class="small-city-benefits__item-title">Сувениры</div>
-                <div class="small-city-benefits__item-desc">
+                <b class="small-city-benefits__item-title">Сувениры</b>
+                <p class="small-city-benefits__item-desc">
                   Не только китайского, но и местного производства!
-                </div>
+                </p>
               </li>
 
               <li class="small-city-benefits__item  small-city-benefits__item--food">
-                <div class="small-city-benefits__item-title">Еда</div>
-                <div class="small-city-benefits__item-desc">
+                <b class="small-city-benefits__item-title">Еда</b>
+                <p class="small-city-benefits__item-desc">
                   Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
-                </div>
+                </p>
               </li>
             </ul>
           </div>
@@ -139,7 +153,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__hashtag">
-          <a href="https://twitter.com/hashtag/visitSEDONA" target="_blank">#visitSEDONA</a>
+          <a>#visitSEDONA</a>
         </div>
 
         <ul class="page-footer__social-link  social-links">

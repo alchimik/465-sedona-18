@@ -2,31 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
     <title>HTML Academy: Седона. Фото и видео</title>
+    <meta name="keywords" content="TODO seo">
+    <meta name="description" content="TODO seo">
   </head>
   <body class="photo-page">
     <header>
-      <nav class="site-nav">
-        <ul class="site-nav__list  site-nav__list--open">
+      <nav class="site-nav  site-nav--open">
+        <ul class="site-nav__list">
           <li class="site-nav__item"><a href="index.html">Главная</a></li>
           <li class="site-nav__item"><a>Фото и видео</a></li>
           <li class="site-nav__item"><a href="form.html">Форма Отзыва</a></li>
           <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
         </ul>
 
-        <!--  TODO тут не понял требования. В макете кнопка закрыть отдельно от гамбургера, -->
-        <!--    а в ТЗ говорится что гамбургер заменяется на крестик -->
-        <span class="site-nav__close-button">Закрыть меню сайта</span>
-        <span class="site-nav__toggler  site-nav__toggler--open">Открыть/Закрыть меню сайта</span>
+        <button type="button" class="site-nav__toggler">
+          Открыть/Закрыть меню сайта
+        </button>
 
-        <span class="site-logo">
-          <a href="index.html"><img src="https://via.placeholder.com/102x83" alt="City of SEDONA (LOGO)"></a>
-        </span>
+        <a class="site-logo" href="index.html">
+          <img src="https://via.placeholder.com/102x83" alt="City of SEDONA (LOGO)">
+        </a>
       </nav>
 
-      <div class="site-banner  site-banner--small">
-        <!-- TODO пока не понятно как делать баннер -->
-        <img class="site-banner__content" src="" alt="???">
+      <div class="site-banner-small">
+        <img src="https://via.placeholder.com/320x160"
+          class="site-banner-small__content"
+          alt="Welcome to the gorgeous Sedona!">
       </div>
     </header>
 
@@ -34,9 +37,10 @@
       <section class="gallery">
         <h1 class="gallery__title">Фото и видео</h1>
 
-        <P class="gallery_desc">
-          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
-        </P>
+        <p class="gallery_desc">
+          Не можете решиться на путешествие из-за курса?
+          Фотографии помогут вам забыть о политике и экономике.
+        </p>
 
         <ul class="gallery__list">
           <li class="gallery__item">
@@ -44,9 +48,14 @@
               <div class="container">
                 <img class="post__img" src="https://via.placeholder.com/280x280"
                   alt="Уходящая вдаль дорога, закат, зелень. Ты запомнишь этот момент на долго...">
-                <div class="post__title">Неродные просторы</div>
-                <div class="post__author">Автор фото: Борис</div>
-                <div class="post__likes">1350</div>
+
+                <h2 class="post__title">Неродные просторы</h2>
+                <span class="post__author">Автор фото: Борис</span>
+
+                <div class="post__likes  like-counter">
+                  <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                  <span class="like-counter__total">1350</span>
+                </div>
               </div>
             </article>
           </li>
@@ -56,9 +65,13 @@
               <div class="container">
                 <img class="post__img" src="https://via.placeholder.com/280x280"
                   alt="Очень страшное растение покрытое смертоносными шипами, такое лучше никогда в жизни не свтречать">
-                <div class="post__title">Местная растительность</div>
-                <div class="post__author">Автор фото: Сергей</div>
-                <div class="post__likes">143</div>
+                <h2 class="post__title">Местная растительность</h2>
+                <span class="post__author">Автор фото: Сергей</span>
+
+                <div class="post__likes  like-counter">
+                  <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                  <span class="like-counter__total">143</span>
+                </div>
               </div>
             </article>
           </li>
@@ -68,9 +81,13 @@
               <div class="container">
                 <img class="post__img" src="https://via.placeholder.com/280x280"
                   alt="Перегнутая дорога, навевает мысли о сиянии">
-                <div class="post__title">Дорога на север</div>
-                <div class="post__author">Автор фото: Петр</div>
-                <div class="post__likes">96</div>
+                <h2 class="post__title">Дорога на север</h2>
+                <span class="post__author">Автор фото: Петр</span>
+
+                <div class="post__likes  like-counter">
+                  <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                  <span class="like-counter__total">96</span>
+                </div>
               </div>
             </article>
           </li>
@@ -80,9 +97,13 @@
               <div class="container">
                 <img class="post__img" src="https://via.placeholder.com/280x280"
                   alt="Огромные залежи камня волею высших сил сформировали подобие моста">
-                <div class="post__title">Мост дьявола</div>
-                <div class="post__author">Автор фото: Антон</div>
-                <div class="post__likes">254</div>
+                <h2 class="post__title">Мост дьявола</h2>
+                <p class="post__author">Автор фото: Антон</p>
+
+                <div class="post__likes  like-counter">
+                  <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                  <span class="like-counter__total">254</span>
+                </div>
               </div>
             </article>
           </li>
@@ -97,8 +118,9 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__hashtag">
-          #visitSEDONA
+          <a href="index.html">#visitSEDONA</a>
         </div>
+
         <div class="page-footer__social-link  social-links">
           <ul>
             <li class="social-links__item  social-links__item--twitter">
