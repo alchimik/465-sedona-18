@@ -1,0 +1,38 @@
+.page-footer {
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+
+.page-footer__hashtag {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+
+  a {
+    color: $black-two;
+    text-decoration: none;
+  }
+
+}
+
+.page-footer__social-link {
+  margin-top: 24px;
+}
+
+.page-footer__credits {
+  font-size: 14px;
+  line-height: 1.86;
+  color: $black-two;
+  margin-top: 38px;
+}
+
+.page-footer__credits-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-footer__credits-link {
+  display: inline-block;
+  vertical-align: middle;
+}

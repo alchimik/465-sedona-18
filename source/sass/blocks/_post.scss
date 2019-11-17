@@ -1,0 +1,24 @@
+.post {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 25px;
+}
+
+.post__title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.71;
+  color: $black-two;
+  margin-bottom: 1px;
+}
+
+.post__author {
+  font-size: 14px;
+  text-transform: none;
+  line-height: 1.71;
+  color: $black;
+}
+
+.post__likes {
+
+}

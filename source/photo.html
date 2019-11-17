@@ -6,6 +6,7 @@
     <title>HTML Academy: Седона. Фото и видео</title>
     <meta name="keywords" content="TODO seo">
     <meta name="description" content="TODO seo">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="photo-page">
     <div class="container">
@@ -18,17 +19,19 @@
             <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
           </ul>
 
-          <button type="button" class="site-nav__toggler">
-            Открыть/Закрыть меню сайта
-          </button>
+          <div class="site-nav__panel">
+            <button class="site-nav__toggler" type="button">
+              Открыть/Закрыть меню сайта
+            </button>
 
-          <a class="site-logo" href="index.html">
-            <img src="https://via.placeholder.com/102x83" alt="City of SEDONA (LOGO)">
-          </a>
+            <a class="site-nav__logo">
+              <img src="./img/logo-sedona-mobile.svg" alt="City of SEDONA (LOGO)">
+            </a>
+          </div>
         </nav>
 
         <div class="site-banner-small">
-          <img src="https://via.placeholder.com/320x160"
+          <img src="./img/text-sedona.svg"
             class="site-banner-small__content"
             alt="Welcome to the gorgeous Sedona!">
         </div>
@@ -46,7 +49,7 @@
           <ul class="gallery__list">
             <li class="gallery__item">
               <figure class="post">
-                <img class="post__img" src="https://via.placeholder.com/280x280"
+                <img class="post__img" src="./img/photo-sunset-mobile@1x.jpg"
                   alt="Уходящая вдаль дорога, закат, зелень. Ты запомнишь этот момент на долго...">
 
                 <figcaption>
@@ -63,7 +66,7 @@
 
             <li class="gallery__item">
               <figure class="post">
-                <img class="post__img" src="https://via.placeholder.com/280x280"
+                <img class="post__img" src="./img/photo-cactus-mobile@1x.jpg"
                   alt="Очень страшное растение покрытое смертоносными шипами, такое лучше никогда в жизни не свтречать">
 
                 <figcaption>
@@ -80,7 +83,7 @@
 
             <li class="gallery__item">
               <figure class="post">
-                <img class="post__img" src="https://via.placeholder.com/280x280"
+                <img class="post__img" src="./img/photo-roads-mobile@1x.jpg"
                   alt="Перегнутая дорога, навевает мысли о сиянии">
 
                 <figcaption>
@@ -97,12 +100,12 @@
 
             <li class="gallery__item">
               <figure class="post">
-                <img class="post__img" src="https://via.placeholder.com/280x280"
+                <img class="post__img" src="./img/photo-bridge-mobile@1x.jpg"
                   alt="Огромные залежи камня волею высших сил сформировали подобие моста">
 
                 <figcaption>
                   <h2 class="post__title">Мост дьявола</h2>
-                  <p class="post__author">Автор фото: Антон</p>
+                  <span class="post__author">Автор фото: Антон</span>
 
                   <div class="post__likes  like-counter">
                     <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
@@ -114,7 +117,7 @@
           </ul>
         </section>
 
-        <section class="video-presentation">
+        <section class="promo-video">
           <!-- TODO -->
         </section>
       </main>
@@ -124,8 +127,8 @@
           <a href="index.html">#visitSEDONA</a>
         </div>
 
-        <div class="page-footer__social-link  social-links">
-          <ul>
+        <div class="page-footer__social-link">
+          <ul class="social-links">
             <li class="social-links__item  social-links__item--twitter">
               <a href="https://twitter.com/hashtag/sedona" target="_blank">Twitter</a>
             </li>
@@ -133,14 +136,14 @@
               <a href="https://www.facebook.com/VisitSedona/" target="_blank">Facebook</a>
             </li>
             <li class="social-links__item  social-links__item--youtube">
-              <a href="https://www.youtube.com/watch?v=HU22peKtyfY">Youtube</a>
+              <a href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">Youtube</a>
             </li>
           </ul>
         </div>
 
         <div class="page-footer__credits">
-          Разработано
-          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <span class="page-footer__credits-text">Разработано</span>
+          <a class="page-footer__credits-link  htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">HtmlAcademy</a>
         </div>
       </footer>
     </div>

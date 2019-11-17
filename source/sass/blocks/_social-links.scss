@@ -1,0 +1,11 @@
+.social-links {
+  @include reset-list;
+}
+
+.social-links__item {
+  width: 46px;
+  height: 48px;
+  display: inline-block;
+  font-size: 0;
+  background-color: $light-grey-blue;
+}

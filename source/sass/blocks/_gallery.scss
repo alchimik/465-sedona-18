@@ -1,0 +1,35 @@
+.gallery {
+  padding-top: 26px;
+}
+
+.gallery__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: $black-two;
+  text-align: center;
+
+  padding-left: $section-side-padding;
+  padding-right: $section-side-padding;
+}
+
+.gallery_desc {
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: center;
+  color: $black;
+  padding-left: $section-side-padding;
+  padding-right: $section-side-padding;
+  margin-top: 26px;
+  margin-bottom: 28px;
+}
+
+.gallery__list {
+  @include reset-list;
+}
+
+.gallery__item {
+  padding-left: $section-side-padding;
+  padding-right: $section-side-padding;
+  border-top: solid 1px gray;
+}

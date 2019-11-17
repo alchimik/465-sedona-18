@@ -1,0 +1,10 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//@mixin section-default-side-paddings {
+//  padding-left: $section-side-padding;
+//  padding-right: $section-side-padding;
+//}

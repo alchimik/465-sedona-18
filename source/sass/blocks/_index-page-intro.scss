@@ -1,0 +1,23 @@
+.index-page-intro {
+  padding-top: 43px;
+  padding-right: $section-side-padding + 5px; // + 5px для лучшего соответствия с макетом
+  padding-left: $section-side-padding + 5px; // + 5px для лучшего соответствия с макетом
+  padding-bottom: 27px;
+  text-align: center;
+}
+
+.index-page-intro__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: #000000;
+  margin-top: 0;
+}
+
+.index-page-intro__desc {
+  font-size: 14px;
+  line-height: 1.86;
+  color: #333333;
+  margin-top: 27px;
+  margin-bottom: 0;
+}
