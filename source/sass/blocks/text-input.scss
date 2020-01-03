@@ -1,0 +1,52 @@
+.text-input {
+  display: flex;
+  margin-top: 20px;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  label {
+    flex-grow: 0;
+    margin-right: 15px;
+
+    font-size: 14px;
+    line-height: 26px;
+    color: #333333;
+    //align-self: center;
+  }
+
+  input {
+    flex-grow: 1;
+    padding: 0 22px;
+    width: 120px;
+    height: 58px;
+    border: none;
+    background-color: #f2f2f2;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+
+    &::placeholder {
+      color: #000000; // TODO проверить что это нужно
+    }
+  }
+}
+
+.text-input--email {
+  margin-top: 12px;
+
+  label {
+    margin-bottom: 6px;
+    padding-left: 22px;
+  }
+}
+
+.text-input--phone {
+  margin-top: 12px;
+
+  label {
+    margin-bottom: 6px;
+    padding-left: 22px;
+  }
+}

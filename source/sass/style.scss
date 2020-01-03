@@ -1,0 +1,27 @@
+@import "./normalize";
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+@import "./global";
+// БЭМ Блоки
+@import "./blocks/advantage";
+@import "./blocks/button";
+@import "./blocks/feedback-form";
+@import "./blocks/find-apartment-suggestion";
+@import "./blocks/form-page-intro";
+@import "./blocks/gallery";
+@import "./blocks/htmlacademy-logo";
+@import "./blocks/index-page-intro";
+@import "./blocks/page-footer";
+@import "./blocks/post";
+@import "./blocks/promo-video";
+@import "./blocks/sedona-map";
+@import "./blocks/site-banner-big";
+@import "./blocks/site-banner-small";
+@import "./blocks/site-nav";
+@import "./blocks/small-city-benefits";
+@import "./blocks/social-links";
+@import "./blocks/text-input";
+@import "./blocks/radio-input";
+@import "./blocks/checkbox-input";
+@import "./blocks/visually-hidden";

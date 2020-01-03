@@ -6,6 +6,7 @@
     <title>HTML Academy: Седона</title>
     <meta name="keywords" content="TODO seo">
     <meta name="description" content="TODO seo">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="index-page">
     <div class="container">
@@ -16,19 +17,30 @@
             <li class="site-nav__item"><a href="photo.html">Фото и видео</a></li>
             <li class="site-nav__item"><a href="form.html">Форма Отзыва</a></li>
             <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+
+            <!-- TODO удалить позже. тесть на переполнение -->
+            <!--            <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">-->
+            <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit,-->
+            <!--              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+            <!--            </a></li>-->
+            <!--            <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">-->
+            <!--              111111111111111111111111111111111111111111111111111111111111-->
+            <!--            </a></li>-->
           </ul>
 
-          <button type="button" class="site-nav__toggler">
-            Открыть/Закрыть меню сайта
-          </button>
+          <div class="site-nav__panel">
+            <button class="site-nav__toggler" type="button">
+              Открыть/Закрыть меню сайта
+            </button>
 
-          <a class="site-logo">
-            <img src="https://via.placeholder.com/102x83" alt="City of SEDONA (LOGO)">
-          </a>
+            <a class="site-nav__logo">
+              <img src="./img/logo-sedona-mobile.svg" alt="City of SEDONA (LOGO)">
+            </a>
+          </div>
         </nav>
 
         <div class="site-banner-big">
-          <img src="https://via.placeholder.com/320x389"
+          <img src="./img/text-sedona-index.svg"
             class="site-banner-big__content"
             alt="Welcome to the gorgeous Sedona! Because the Grand Canyon Sucks">
         </div>
@@ -37,118 +49,131 @@
       <main>
         <section class="index-page-intro">
           <h1 class="index-page-intro__title">
-            СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!
+            СЕДОНА — небольшой городок в&nbsp;Аризоне, заслуживающий большего!
           </h1>
 
           <p class="index-page-intro__desc">
-            Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+            Рассмотрим 5 причин, по&nbsp;которым Седона круче, чем гранд каньон!
           </p>
         </section>
 
-        <section class="advantage  advantage--primary">
-          <h2>Настоящий городок</h2>
+        <section class="advantage  advantage--primary  advantage--first">
+          <div class="advantage__main-content">
+            <h2 class="advantage__title">Настоящий городок</h2>
 
-          <span class="advantage__number">№1</span>
+            <span class="advantage__number">№1</span>
 
-          <p class="advantage__desc">
-            Седона не аттракцион для туристов, там течет своя жизнь
-          </p>
+            <p class="advantage__desc">
+              Седона не аттракцион для туристов, там течет своя жизнь
+            </p>
+          </div>
 
           <div class="advantage__photo">
-            <img src="https://via.placeholder.com/320x260"
-              alt="На фото изображен сельский городок во все его сельском великолемии. Деревянные дома, флаги всех цветов и ни единой живой души..."
-            >
-          </div>
-
-          <div class="advantage__benefits  small-city-benefits">
-            <h3 class="visually-hidden">Преимущества посещения маленького городка</h3>
-
-            <ul>
-              <li class="small-city-benefits__item  small-city-benefits__item--housing">
-                <b class="small-city-benefits__item-title">Жилье</b>
-                <p class="small-city-benefits__item-desc">
-                  Рекомендуем пожить в настоящем мотеле, все как в кино!
-                </p>
-              </li>
-
-              <li class="small-city-benefits__item  small-city-benefits__item--souvenir">
-                <b class="small-city-benefits__item-title">Сувениры</b>
-                <p class="small-city-benefits__item-desc">
-                  Не только китайского, но и местного производства!
-                </p>
-              </li>
-
-              <li class="small-city-benefits__item  small-city-benefits__item--food">
-                <b class="small-city-benefits__item-title">Еда</b>
-                <p class="small-city-benefits__item-desc">
-                  Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
-                </p>
-              </li>
-            </ul>
+            <img src="./img/main-city-mobile@1x.jpg"
+              alt="На фото изображен сельский городок во все его сельском великолемии...">
           </div>
         </section>
 
-        <section class="advantage  advantage--primary">
-          <h2>Там есть мост дьявола</h2>
+        <section class="small-city-benefits">
+          <h3 class="visually-hidden">Преимущества посещения маленького городка</h3>
 
-          <span class="advantage__number">№2</span>
+          <ul class="small-city-benefits__list">
+            <li class="small-city-benefits__item  small-city-benefits__item--housing">
+              <b class="small-city-benefits__item-title">Жилье</b>
+              <p class="small-city-benefits__item-desc">
+                Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!
+              </p>
+            </li>
 
-          <p class="advantage__desc">
-            Да, по нему можно пройти! Если вы осмелитесь, конечно
-          </p>
+            <li class="small-city-benefits__item  small-city-benefits__item--souvenir">
+              <b class="small-city-benefits__item-title">Сувениры</b>
+              <p class="small-city-benefits__item-desc">
+                Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!
+              </p>
+            </li>
+
+            <li class="small-city-benefits__item  small-city-benefits__item--food">
+              <b class="small-city-benefits__item-title">Еда</b>
+              <p class="small-city-benefits__item-desc">
+                Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;НЕ&nbsp;разочаруетесь!
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <div class="advantage  advantage--primary">
+          <div class="advantage__main-content">
+            <h2 class="advantage__title">Там есть мост дьявола</h2>
+
+            <span class="advantage__number">№2</span>
+
+            <p class="advantage__desc">
+              Да, по нему можно пройти! Если вы осмелитесь, конечно
+            </p>
+          </div>
 
           <div class="advantage__photo">
-            <img src="https://via.placeholder.com/320x260"
-              alt="Скала каменный мост. Силами природы возведенный каменный мост над бездонной пропастью"
-            >
+            <img src="./img/photo-bridge-mobile@1x.jpg"
+              alt="Скала каменный мост. Силами природы возведенный каменный мост над бездонной пропастью">
+          </div>
+        </div>
+
+        <section class="advantage">
+          <div class="advantage__main-content">
+            <h2 class="advantage__title">Небольшая площадь</h2>
+
+            <span class="advantage__number">№3</span>
+
+            <p class="advantage__desc">
+              Все интересные места находятся очень близко
+            </p>
           </div>
         </section>
 
         <section class="advantage">
-          <h2>Небольшая площадь</h2>
+          <div class="advantage__main-content">
+            <h2 class="advantage__title">Красивая дорога</h2>
 
-          <span class="advantage__number">№3</span>
+            <span class="advantage__number">№4</span>
 
-          <p class="advantage__desc">
-            Все интересные места находятся очень близко
-          </p>
+            <p class="advantage__desc">
+              Ехать в&nbsp;седону из&nbsp;<nobr>Лас-Вегаса</nobr>
+              совсем НЕ&nbsp;СКУЧНО!
+            </p>
+          </div>
         </section>
 
         <section class="advantage">
-          <h2>Красивая дорога</h2>
+          <div class="advantage__main-content">
+            <h2 class="advantage__title">Мало туристов</h2>
 
-          <span class="advantage__number">№4</span>
+            <span class="advantage__number">№5</span>
 
-          <p class="advantage__desc">
-            Ехать в седону из лас-вегаса совсем НЕ СКУЧНО!
-          </p>
-        </section>
-
-        <section class="advantage">
-          <h2>Мало туристов</h2>
-
-          <span class="advantage__number">№5</span>
-
-          <p class="advantage__desc">
-            Большинство едет в гранд каньон и толпится там
-          </p>
+            <p class="advantage__desc">
+              Большинство едет в&nbsp;гранд каньон и&nbsp;толпится там
+            </p>
+          </div>
         </section>
 
         <section class="find-apartment-suggestion">
+          <h2 class="visually-hidden">Премиальные отели без регистрации и смс</h2>
+
           <p class="find-apartment-suggestion__title">
             Заинтересовались?
           </p>
 
           <p class="find-apartment-suggestion__text">
             Укажите предполагаемые даты поездки,
-            и мы покажем вам лучшие предложения гостиниц в седоне
+            и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;седоне
           </p>
 
-          <a class="find-apartment-suggestion__link" href="#">Найти гостиницу</a>
+          <a class="find-apartment-suggestion__link  button" href="#">Найти гостиницу</a>
         </section>
 
-        <section class="sedona-map">
-        </section>
+        <!-- TODO не удалось с первого раза нормально указать координаты и масштаб, возможно стоит попытаться ещё раз -->
+        <iframe class="sedona-map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15621.264151255386!2d-111.65426469307185!3d35.19798644927836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1574486802965!5m2!1sru!2sru"
+          allowfullscreen=""></iframe>
       </main>
 
       <footer class="page-footer">
@@ -156,21 +181,23 @@
           <a>#visitSEDONA</a>
         </div>
 
-        <ul class="page-footer__social-link  social-links">
-          <li class="social-links__item  social-links__item--twitter">
-            <a href="https://twitter.com/hashtag/sedona" target="_blank">Twitter</a>
-          </li>
-          <li class="social-links__item  social-links__item--facebook">
-            <a href="https://www.facebook.com/VisitSedona/" target="_blank">Facebook</a>
-          </li>
-          <li class="social-links__item  social-links__item--youtube">
-            <a href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">Youtube</a>
-          </li>
-        </ul>
+        <div class="page-footer__social-link">
+          <ul class="social-links">
+            <li class="social-links__item  social-links__item--twitter">
+              <a href="https://twitter.com/hashtag/sedona" target="_blank">Twitter</a>
+            </li>
+            <li class="social-links__item  social-links__item--facebook">
+              <a href="https://www.facebook.com/VisitSedona/" target="_blank">Facebook</a>
+            </li>
+            <li class="social-links__item  social-links__item--youtube">
+              <a href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">Youtube</a>
+            </li>
+          </ul>
+        </div>
 
         <div class="page-footer__credits">
-          Разработано
-          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">HtmlAcademy</a>
+          <span class="page-footer__credits-text">Разработано</span>
+          <a class="page-footer__credits-link  htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">HtmlAcademy</a>
         </div>
       </footer>
     </div>

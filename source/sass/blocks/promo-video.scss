@@ -1,0 +1,25 @@
+.promo-video {
+  text-align: center;
+  padding-top: 31px;
+  padding-bottom: 44px;
+}
+
+.promo-video__title {
+  padding: 0 $section-side-padding;
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: $black-two;
+}
+
+.promo-video__text {
+  padding-left: $section-side-padding;
+  padding-right: $section-side-padding;
+  margin-top: 26px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: $black;
+}

@@ -1,0 +1,23 @@
+.find-apartment-suggestion {
+  text-align: center;
+  padding: 4px $section-side-padding 50px $section-side-padding;
+}
+
+.find-apartment-suggestion__title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+  color: #000000;
+}
+
+.find-apartment-suggestion__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $black;
+}
+
+.find-apartment-suggestion__link {
+  width: 100%;
+  margin-top: 23px;
+  padding: 15px 0 17px 0;
+}
