@@ -31,7 +31,7 @@
         </nav>
 
         <div class="site-banner-small">
-          <img src="https://via.placeholder.com/320x160"
+          <img src="./img/text-sedona.svg"
             class="site-banner-small__content"
             alt="Welcome to the gorgeous Sedona!">
         </div>
@@ -77,27 +77,27 @@
             </div>
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset">
+          <fieldset class="feedback-form__fieldset  feedback-form__fieldset--contacts">
             <legend class="feedback-form__fieldset-title">Контактная информация:</legend>
 
-            <div class="phone-input">
+            <div class="text-input  text-input--phone">
               <label for="feedback-form__phone">
-                Контактный телефон<span class="required-field-mark">*</span>:
+                Контактный&nbsp;телефон<span class="required-field-mark">*</span>:
               </label>
               <input type="tel" name="phone" value="" placeholder="Введите телефон" required
                 id="feedback-form__phone"/>
             </div>
 
-            <div class="email-input">
+            <div class="text-input  text-input--email">
               <label for="feedback-form__email">
-                Электронная почта<span class="required-field-mark">*</span>:
+                Электронная&nbsp;почта<span class="required-field-mark">*</span>:
               </label>
               <input type="email" name="email" value="" placeholder="Введите e-mail" required
                 id="feedback-form__email"/>
             </div>
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset">
+          <fieldset class="feedback-form__fieldset  feedback-form__fieldset--rating">
             <legend class="feedback-form__fieldset-title">Ваше Общее впечатление:</legend>
 
             <div class="radio-input">
@@ -119,7 +119,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset">
+          <fieldset class="feedback-form__fieldset  feedback-form__fieldset--places">
             <legend class="feedback-form__fieldset-title">Посещенные достопримечательности:</legend>
 
             <div class="checkbox-input">
@@ -151,11 +151,13 @@
             <legend class="feedback-form__fieldset-title">Опишите свои эмоции:</legend>
 
             <label class="visually-hidden" for="feedback-form__review">Отзыв</label>
-            <textarea name="review"
+            <textarea class="feedback-form__review" name="review"
               id="feedback-form__review">Опишите подробно все свои восторги</textarea>
           </fieldset>
 
-          <button class="button  feedback-form__submit-button" type="submit">Отправить отзыв</button>
+          <fieldset class="feedback-form__fieldset  feedback-form__fieldset--submit">
+            <button class="button  feedback-form__submit-button" type="submit">Отправить отзыв</button>
+          </fieldset>
         </form>
       </main>
 

@@ -1,5 +1,6 @@
 .gallery {
   padding-top: 26px;
+  border-bottom: solid 1px #e5e5e5;
 }
 
 .gallery__title {
@@ -13,7 +14,7 @@
   padding-right: $section-side-padding;
 }
 
-.gallery_desc {
+.gallery__desc {
   font-size: 14px;
   line-height: 1.75;
   text-align: center;
@@ -31,5 +32,5 @@
 .gallery__item {
   padding-left: $section-side-padding;
   padding-right: $section-side-padding;
-  border-top: solid 1px gray;
+  border-top: solid 1px #e5e5e5;
 }

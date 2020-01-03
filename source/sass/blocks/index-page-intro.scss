@@ -1,8 +1,5 @@
 .index-page-intro {
-  padding-top: 43px;
-  padding-right: $section-side-padding + 5px; // + 5px для лучшего соответствия с макетом
-  padding-left: $section-side-padding + 5px; // + 5px для лучшего соответствия с макетом
-  padding-bottom: 27px;
+  padding: 43px $section-side-padding 27px $section-side-padding;
   text-align: center;
 }
 
@@ -20,4 +17,10 @@
   color: #333333;
   margin-top: 27px;
   margin-bottom: 0;
+}
+
+.promo-video__player {
+  background-color: gray;
+  height: 267px;
+  margin-top: 35px;
 }

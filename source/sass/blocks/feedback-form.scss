@@ -1,0 +1,69 @@
+.feedback-form__fieldset {
+  border: none;
+  border-top: solid 1px #e5e5e5;
+  padding: 17px $section-side-padding 24px $section-side-padding;
+  margin: 0;
+}
+
+.feedback-form__fieldset--contacts {
+  padding-bottom: 29px;
+  padding-top: 18px;
+}
+
+.feedback-form__fieldset--submit {
+  border-top: none;
+  padding-top: 26px;
+  padding-bottom: 42px;
+}
+
+.feedback-form__fieldset--rating {
+  padding-bottom: 29px;
+}
+
+.feedback-form__fieldset--places {
+  padding-top: 18px;
+
+  .feedback-form__fieldset-title {
+    padding-bottom: 19px;
+  }
+}
+
+.feedback-form__fieldset-title {
+  float: left; // костыль для отображения legend внутри fieldset
+  padding-bottom: 23px;
+  width: 100%;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: $black-two;
+
+  + * { // костыль для отображения legend внутри fieldset
+    clear: left;
+  }
+}
+
+.feedback-form__review {
+  // TODO возможно стоит вынести в отдельный блок
+  display: block;
+  min-height: 160px;
+  background-color: #f2f2f2;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  resize: vertical;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  padding: 15px 20px;
+}
+
+.feedback-form__submit-button {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
