@@ -11,7 +11,6 @@
     font-size: 14px;
     line-height: 26px;
     color: #333333;
-    //align-self: center;
   }
 
   input {
@@ -39,6 +38,7 @@
   label {
     margin-bottom: 6px;
     padding-left: 22px;
+    width: 100%;
   }
 }
 
@@ -48,5 +48,30 @@
   label {
     margin-bottom: 6px;
     padding-left: 22px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-input--email {
+    margin-top: 25px;
+  }
+
+  .text-input--phone {
+    margin-top: 51px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-input--email {
+    label {
+      width: auto;
+    }
+  }
+
+  .text-input--phone {
+    label {
+      width: auto;
+    }
   }
 }

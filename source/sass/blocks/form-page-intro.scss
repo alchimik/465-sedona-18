@@ -1,6 +1,9 @@
 .form-page-intro {
+  @include default-side-padding;
+
   text-align: center;
-  padding: 38px $section-side-padding 17px $section-side-padding;
+  padding-top: 37px;
+  padding-bottom: 17px;
 }
 
 .form-page-intro__title {
@@ -17,4 +20,29 @@
   letter-spacing: normal;
   color: #333333;
   margin: 27px 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .form-page-intro {
+    padding-top: 72px;
+    padding-bottom: 30px;
+  }
+
+  .form-page-intro__title {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .form-page-intro__desc {
+    margin-top: 30px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-page-intro {
+    padding-top: 110px;
+  }
 }

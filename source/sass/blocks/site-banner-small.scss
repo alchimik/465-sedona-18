@@ -1,5 +1,17 @@
 .site-banner-small {
-  height: 160px;
+  height: 158px;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .site-banner-small {
+    height: 290px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-banner-small {
+    height: 301px;
+  }
 }

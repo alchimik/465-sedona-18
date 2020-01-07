@@ -1,4 +1,6 @@
 .page-footer {
+  @include default-side-padding;
+
   text-align: center;
   padding-top: 30px;
   padding-bottom: 24px;
@@ -34,4 +36,27 @@
 .page-footer__credits-link {
   display: inline-block;
   vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  .page-footer__social-link {
+    margin-top: 0;
+  }
+
+  .page-footer__credits {
+    margin-top: 0;
+  }
+
+  .page-footer__credits-text {
+    margin-right: 7px;
+    margin-left: 10px;
+  }
 }

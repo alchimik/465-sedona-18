@@ -11,10 +11,15 @@
   <body class="index-page">
     <div class="container">
       <header>
-        <nav class="site-nav  site-nav--open">
+        <nav class="site-nav  site-nav--opened  site-nav--nojs">
           <ul class="site-nav__list">
             <li class="site-nav__item"><a>Главная</a></li>
             <li class="site-nav__item"><a href="photo.html">Фото и видео</a></li>
+            <li class="site-nav__item  site-nav__item--site-logo">
+              <a>
+                <img src="./img/logo-sedona-mobile.svg" alt="City of SEDONA (LOGO)">
+              </a>
+            </li>
             <li class="site-nav__item"><a href="form.html">Форма Отзыва</a></li>
             <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
 
@@ -28,15 +33,9 @@
             <!--            </a></li>-->
           </ul>
 
-          <div class="site-nav__panel">
-            <button class="site-nav__toggler" type="button">
-              Открыть/Закрыть меню сайта
-            </button>
-
-            <a class="site-nav__logo">
-              <img src="./img/logo-sedona-mobile.svg" alt="City of SEDONA (LOGO)">
-            </a>
-          </div>
+          <button class="site-nav__toggler" type="button">
+            Открыть/Закрыть меню сайта
+          </button>
         </nav>
 
         <div class="site-banner-big">
@@ -57,9 +56,9 @@
           </p>
         </section>
 
-        <section class="advantage  advantage--primary  advantage--first">
-          <div class="advantage__main-content">
-            <h2 class="advantage__title">Настоящий городок</h2>
+        <section class="advantage-with-photo    advantage-with-photo--first">
+          <div class="advantage  advantage--primary  advantage-with-photo__advantage">
+            <h2 class="advantage__title">Настоящий <br class="mobile-hidden">городок</h2>
 
             <span class="advantage__number">№1</span>
 
@@ -68,7 +67,7 @@
             </p>
           </div>
 
-          <div class="advantage__photo">
+          <div class="advantage-with-photo__photo">
             <img src="./img/main-city-mobile@1x.jpg"
               alt="На фото изображен сельский городок во все его сельском великолемии...">
           </div>
@@ -101,9 +100,9 @@
           </ul>
         </section>
 
-        <div class="advantage  advantage--primary">
-          <div class="advantage__main-content">
-            <h2 class="advantage__title">Там есть мост дьявола</h2>
+        <div class="advantage-with-photo   advantage-with-photo--second">
+          <div class="advantage  advantage--primary  advantage-with-photo__advantage">
+            <h2 class="advantage__title">Там есть <br class="mobile-hidden">мост дьявола</h2>
 
             <span class="advantage__number">№2</span>
 
@@ -112,27 +111,25 @@
             </p>
           </div>
 
-          <div class="advantage__photo">
+          <div class="advantage-with-photo__photo">
             <img src="./img/photo-bridge-mobile@1x.jpg"
               alt="Скала каменный мост. Силами природы возведенный каменный мост над бездонной пропастью">
           </div>
         </div>
 
-        <section class="advantage">
-          <div class="advantage__main-content">
-            <h2 class="advantage__title">Небольшая площадь</h2>
+        <div class="advantage-list">
+          <section class="advantage  advantage-list__item">
+            <h2 class="advantage__title">Небольшая <br class="mobile-hidden">площадь</h2>
 
             <span class="advantage__number">№3</span>
 
             <p class="advantage__desc">
               Все интересные места находятся очень близко
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section class="advantage">
-          <div class="advantage__main-content">
-            <h2 class="advantage__title">Красивая дорога</h2>
+          <section class="advantage  advantage-list__item">
+            <h2 class="advantage__title">Красивая <br class="mobile-hidden">дорога</h2>
 
             <span class="advantage__number">№4</span>
 
@@ -140,20 +137,18 @@
               Ехать в&nbsp;седону из&nbsp;<nobr>Лас-Вегаса</nobr>
               совсем НЕ&nbsp;СКУЧНО!
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section class="advantage">
-          <div class="advantage__main-content">
-            <h2 class="advantage__title">Мало туристов</h2>
+          <section class="advantage  advantage-list__item">
+            <h2 class="advantage__title">Мало <br class="mobile-hidden">туристов</h2>
 
             <span class="advantage__number">№5</span>
 
             <p class="advantage__desc">
               Большинство едет в&nbsp;гранд каньон и&nbsp;толпится там
             </p>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section class="find-apartment-suggestion">
           <h2 class="visually-hidden">Премиальные отели без регистрации и смс</h2>
@@ -201,5 +196,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -9,4 +9,8 @@
   display: inline-block;
   background-color: $light-grey-blue;
   margin-right: 6px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }

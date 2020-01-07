@@ -1,18 +1,31 @@
+.site-nav {
+  padding-bottom: 56px;
+  background-color: white;
+  position: relative;
+}
+
 .site-nav__list {
+  position: relative;
+
   @include reset-list;
 }
 
 .site-nav__item {
   // TODO тени скопированные из zeplin выглядят явно не так как в макете
   box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px gray; // TODO заменить цвет на правильный
   background-color: $light-grey-blue;
 
   text-align: center;
 
-  a {
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  & a {
     display: block;
     padding: 8px $section-side-padding;
-    overflow: hidden;
+    //overflow: hidden;
     margin: 0 20px;
 
     font-size: 18px;
@@ -23,16 +36,22 @@
   }
 }
 
-.site-nav__panel {
-  height: 56px;
-  color: white;
-  text-align: center;
-  position: relative;
-}
+.site-nav__item--site-logo {
+  position: absolute;
+  background: none;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  bottom: 0;
+  box-shadow: none;
+  border: none;
 
-.site-nav__logo {
-  width: 102px;
-  height: 83px;
+  a {
+    height: 56px;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
 }
 
 .site-nav__toggler {
@@ -45,4 +64,67 @@
 
   font-size: 0;
   border: none;
+
+  .site-nav--nojs & {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  // меню может скрываться только на мобильной версии сайта
+  .site-nav--closed {
+    .site-nav__item {
+      display: none;
+
+      &--site-logo {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    padding-bottom: 0;
+  }
+
+  .site-nav__list {
+    display: flex;
+  }
+
+  .site-nav__item {
+    width: 153px;
+    background: none;
+    box-shadow: none;
+    border: none;
+
+    a {
+      color: #000000;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 26px;
+      padding: 14px 0;
+      margin: 0 10px; // TODO чтобы были пробелы между элементами меню
+    }
+  }
+
+  .site-nav__item--site-logo {
+    flex-grow: 1;
+    transform: none;
+    position: initial;
+
+    a {
+      padding: 0;
+    }
+  }
+
+  .site-nav__toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-nav__item {
+    width: 239px;
+  }
 }

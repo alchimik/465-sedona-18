@@ -3,3 +3,18 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin default-side-padding {
+  padding-right: $section-side-padding;
+  padding-left: $section-side-padding;
+
+  @media (min-width: 768px) {
+    padding-right: $section-side-padding--tablet;
+    padding-left: $section-side-padding--tablet;
+  }
+
+  @media (min-width: 1200px) {
+    padding-right: $section-side-padding--desktop;
+    padding-left: $section-side-padding--desktop;
+  }
+}
