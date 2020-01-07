@@ -1,8 +1,12 @@
 .feedback-form__fieldset {
+  @include default-side-padding;
+
   border: none;
   border-top: solid 1px #e5e5e5;
-  padding: 17px $section-side-padding 24px $section-side-padding;
+  padding-top: 17px;
+  padding-bottom: 24px;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .feedback-form__fieldset--contacts {
@@ -17,12 +21,18 @@
 }
 
 .feedback-form__fieldset--rating {
-  padding-bottom: 29px;
+  padding-bottom: 30px;
 }
 
 .feedback-form__fieldset--places {
   padding-top: 18px;
 
+  .feedback-form__fieldset-title {
+    padding-bottom: 19px;
+  }
+}
+
+.feedback-form__fieldset--review {
   .feedback-form__fieldset-title {
     padding-bottom: 19px;
   }
@@ -66,4 +76,102 @@
   padding: 16px 0;
   box-sizing: border-box;
   text-transform: uppercase;
+}
+
+.feedback-form__required-field-help {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .feedback-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback-form__fieldset {
+    width: 100%;
+    border-top: none;
+    padding-top: 42px;
+  }
+
+  .feedback-form__fieldset--rating {
+    order: -1;
+    width: 50%;
+    padding-right: 40px;
+
+    .feedback-form__fieldset-title {
+      text-align: left;
+      padding-bottom: 60px;
+    }
+  }
+
+  .feedback-form__fieldset--name {
+    width: 50%;
+
+    .feedback-form__fieldset-title {
+      text-align: left;
+      padding-bottom: 60px;
+    }
+  }
+
+  .feedback-form__fieldset--places {
+    padding-top: 23px;
+
+    .feedback-form__fieldset-title {
+      padding-bottom: 13px;
+    }
+  }
+
+  .feedback-form__fieldset--review {
+    .feedback-form__fieldset-title {
+      padding-bottom: 60px;
+    }
+  }
+
+  .feedback-form__fieldset--submit {
+    padding-top: 33px;
+    padding-bottom: 64px;
+    position: relative;
+  }
+
+  .feedback-form__fieldset-title {
+    font-size: 21px;
+    line-height: 26px;
+
+    span {
+      display: inline-block;
+      max-width: 350px;
+    }
+  }
+
+  .feedback-form__submit-button {
+    width: 324px;
+  }
+
+  // костыль. Кажется fieldset нельзя сделать display: flex
+  .feedback-form__required-field-help {
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    top: 51px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .feedback-form__fieldset--contacts {
+    .text-input {
+      width: 50%;
+      float: left;
+      margin-top: 0;
+      padding-right: 60px;
+      box-sizing: border-box;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
 }

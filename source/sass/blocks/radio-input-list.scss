@@ -1,0 +1,13 @@
+.radio-input-list {
+  > * {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .radio-input-list {
+    > * {
+      margin-top: 21px;
+    }
+  }
+}

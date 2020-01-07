@@ -1,6 +1,9 @@
 .find-apartment-suggestion {
+  @include default-side-padding;
+
   text-align: center;
-  padding: 4px $section-side-padding 50px $section-side-padding;
+  padding-top: 4px;
+  padding-bottom: 50px;
 }
 
 .find-apartment-suggestion__title {
@@ -14,10 +17,40 @@
   font-size: 14px;
   line-height: 1.71;
   color: $black;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .find-apartment-suggestion__link {
   width: 100%;
   margin-top: 23px;
   padding: 15px 0 17px 0;
+}
+
+@media (min-width: 768px) {
+  .find-apartment-suggestion {
+    padding-top: 24px;
+    padding-bottom: 58px;
+  }
+
+  .find-apartment-suggestion__title {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .find-apartment-suggestion__link {
+    margin-top: 28px;
+    width: 458px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .find-apartment-suggestion {
+    padding-bottom: 64px;
+  }
+
+  .find-apartment-suggestion__link {
+    margin-top: 34px;
+  }
 }

@@ -1,0 +1,46 @@
+.advantage-with-photo {
+  box-sizing: border-box;
+
+  &--first {
+    padding-top: 17px; // место под декоративный треугольник
+  }
+}
+
+.advantage-with-photo__advantage {
+  box-sizing: border-box;
+}
+
+.advantage-with-photo__photo {
+  height: 260px;
+  background-color: red; // TODO tmp
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    position: absolute; // TODO tmp
+  }
+}
+
+@media (min-width: 768px) {
+  .advantage-with-photo {
+    display: flex;
+    padding-top: 0;
+  }
+
+  .advantage-with-photo__advantage {
+    width: 33.3%;
+  }
+
+  .advantage-with-photo__photo {
+    width: 66.6%;
+    flex-grow: 1;
+    height: auto;
+  }
+
+  .advantage-with-photo--second {
+    .advantage-with-photo__advantage {
+      order: 2;
+    }
+  }
+}

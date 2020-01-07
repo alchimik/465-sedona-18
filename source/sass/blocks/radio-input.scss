@@ -1,17 +1,8 @@
 .radio-input {
   height: 56px;
-  margin-top: 13px;
   position: relative;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 56px;
-    height: 56px;
-    background-color: #f2f2f2;
-    border-radius: 50%;
-  }
+  display: flex;
+  align-items: center;
 
   input {
     display: none;
@@ -19,24 +10,41 @@
 
   label {
     vertical-align: middle;
-    margin-left: 18px;
+    margin-left: 78px;
     text-transform: none;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.44;
     color: #000000;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      width: 56px;
+      height: 56px;
+      top: 0;
+      left: 0;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      top: 18px;
+      left: 18px;
+      background-color: #333333;
+      border-radius: 50%;
+    }
   }
 
   input:checked + label::after {
-    content: "";
-    position: absolute;
     display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    top: 18px;
-    left: 18px;
-    background-color: #333333;
-    border-radius: 50%;
   }
 }

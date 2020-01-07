@@ -3,3 +3,9 @@
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   overflow: hidden;
 }
+
+@media (min-width: 768px) {
+  .site-banner-big {
+    height: 518px;
+  }
+}

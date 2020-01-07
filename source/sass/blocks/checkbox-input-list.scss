@@ -1,0 +1,32 @@
+.checkbox-input-list {
+  > * {
+    margin-top: 24px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 768px) {
+  .checkbox-input-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 460px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    > * {
+      width: 200px;
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .checkbox-input-list {
+    margin: 0 57px;
+    width: auto;
+
+    > * {
+      width: 212px;
+    }
+  }
+}
