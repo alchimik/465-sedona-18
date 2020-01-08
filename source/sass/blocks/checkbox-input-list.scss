@@ -1,7 +1,9 @@
-.checkbox-input-list {
-  > * {
-    margin-top: 24px;
-    box-sizing: border-box;
+.checkbox-input-list__item {
+  margin-top: 24px;
+  box-sizing: border-box;
+
+  &:first-of-type {
+    margin-top: 0;
   }
 }
 
@@ -12,10 +14,14 @@
     width: 460px;
     margin: 0 auto;
     justify-content: space-between;
+  }
 
-    > * {
-      width: 200px;
-      margin-top: 32px;
+  .checkbox-input-list__item {
+    width: 200px;
+    margin-top: 32px;
+
+    &:first-of-type {
+      margin-top: 32px; // костыль
     }
   }
 }
@@ -24,9 +30,9 @@
   .checkbox-input-list {
     margin: 0 57px;
     width: auto;
+  }
 
-    > * {
-      width: 212px;
-    }
+  .checkbox-input-list__item {
+    width: 212px;
   }
 }
