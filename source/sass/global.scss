@@ -5,6 +5,13 @@ body {
   text-transform: uppercase;
 }
 
+// дефолтный box-sizing: border-box слишком удобный, невозможно отказаться
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @media (max-width: 767px) {
   .mobile-hidden {
     display: none;

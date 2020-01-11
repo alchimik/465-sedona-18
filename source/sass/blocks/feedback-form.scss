@@ -6,7 +6,6 @@
   padding-top: 17px;
   padding-bottom: 24px;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .feedback-form__fieldset--contacts {
@@ -57,7 +56,6 @@
   min-height: 160px;
   background-color: #f2f2f2;
   width: 100%;
-  box-sizing: border-box;
   border: none;
   resize: vertical;
 
@@ -71,7 +69,6 @@
   display: block;
   width: 100%;
   padding: 16px 0;
-  box-sizing: border-box;
   text-transform: uppercase;
 }
 
@@ -164,7 +161,6 @@
       float: left;
       margin-top: 0;
       padding-right: 60px;
-      box-sizing: border-box;
 
       &:last-of-type {
         padding-right: 0;
