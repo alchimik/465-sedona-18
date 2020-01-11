@@ -1,13 +1,9 @@
-.radio-input-list {
-  > * {
-    margin-top: 13px;
-  }
+.radio-input-list__item {
+  margin-top: 13px;
 }
 
 @media (min-width: 768px) {
-  .radio-input-list {
-    > * {
-      margin-top: 21px;
-    }
+  .radio-input-list__item {
+    margin-top: 21px;
   }
 }
