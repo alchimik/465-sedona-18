@@ -14,7 +14,7 @@
         <nav class="site-nav  site-nav--opened  site-nav--nojs">
           <ul class="site-nav__list">
             <li class="site-nav__item"><a href="index.html">Главная</a></li>
-            <li class="site-nav__item"><a>Фото и видео</a></li>
+            <li class="site-nav__item  site-nav__item--active"><a>Фото и видео</a></li>
             <li class="site-nav__item  site-nav__item--site-logo">
               <a href="index.html">
                 <img src="./img/logo-sedona-mobile.svg" alt="City of SEDONA (LOGO)">
@@ -25,7 +25,13 @@
           </ul>
 
           <button class="site-nav__toggler" type="button">
-            Открыть/Закрыть меню сайта
+            <span class="site-nav__toggler-inner">
+              <span class="site-nav__toggler-line"></span>
+              <span class="site-nav__toggler-line"></span>
+              <span class="site-nav__toggler-line"></span>
+            </span>
+
+            <span class="visually-hidden">Открыть/Закрыть меню сайта</span>
           </button>
         </nav>
 
@@ -58,7 +64,7 @@
                   <span class="post__author">Автор фото: Борис</span>
 
                   <div class="post__likes  like-counter">
-                    <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                    <button class="like-counter__button" type="button" aria-label="Нравится">&#128077;</button>
                     <span class="like-counter__total">1350</span>
                   </div>
                 </figcaption>
@@ -77,7 +83,7 @@
                   <span class="post__author">Автор фото: Сергей</span>
 
                   <div class="post__likes  like-counter">
-                    <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                    <button class="like-counter__button" type="button" aria-label="Нравится">&#128077;</button>
                     <span class="like-counter__total">143</span>
                   </div>
                 </figcaption>
@@ -96,7 +102,7 @@
                   <span class="post__author">Автор фото: Петр</span>
 
                   <div class="post__likes  like-counter">
-                    <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                    <button class="like-counter__button" type="button" aria-label="Нравится">&#128077;</button>
                     <span class="like-counter__total">96</span>
                   </div>
                 </figcaption>
@@ -115,7 +121,7 @@
                   <span class="post__author">Автор фото: Антон</span>
 
                   <div class="post__likes  like-counter">
-                    <button class="like-counter__like" type="button" aria-label="Нравится">&#128077;</button>
+                    <button class="like-counter__button" type="button" aria-label="Нравится">&#128077;</button>
                     <span class="like-counter__total">254</span>
                   </div>
                 </figcaption>
@@ -130,8 +136,8 @@
           </h2>
           <p class="promo-video__title">Все еще сомневаетесь?</p>
           <p class="promo-video__text">
-            Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами,
-            пока&nbsp;они не&nbsp;подорожали в&nbsp;очередной раз!
+            Смотрите видеопрезентацию и скорее за&nbsp;билетами,
+            пока они не подорожали в&nbsp;очередной раз!
           </p>
 
           <div class="promo-video__player"></div>

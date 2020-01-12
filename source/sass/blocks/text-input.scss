@@ -29,6 +29,17 @@
     &::placeholder {
       color: #000000; // TODO проверить что это нужно
     }
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active,
+    &:focus {
+      background-color: white;
+      border: solid 4px #e5e5e5;
+      outline: none;
+    }
   }
 }
 

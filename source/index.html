@@ -11,9 +11,9 @@
   <body class="index-page">
     <div class="container">
       <header>
-        <nav class="site-nav  site-nav--opened  site-nav--nojs">
+        <nav class="site-nav  site-nav--nojs">
           <ul class="site-nav__list">
-            <li class="site-nav__item"><a>Главная</a></li>
+            <li class="site-nav__item  site-nav__item--active"><a>Главная</a></li>
             <li class="site-nav__item"><a href="photo.html">Фото и видео</a></li>
             <li class="site-nav__item  site-nav__item--site-logo">
               <a>
@@ -25,7 +25,13 @@
           </ul>
 
           <button class="site-nav__toggler" type="button">
-            Открыть/Закрыть меню сайта
+            <span class="site-nav__toggler-inner">
+              <span class="site-nav__toggler-line"></span>
+              <span class="site-nav__toggler-line"></span>
+              <span class="site-nav__toggler-line"></span>
+            </span>
+
+            <span class="visually-hidden">Открыть/Закрыть меню сайта</span>
           </button>
         </nav>
 
@@ -54,7 +60,7 @@
             <span class="advantage__number">№1</span>
 
             <p class="advantage__desc">
-              Седона не аттракцион для туристов, там течет своя жизнь
+              Седона не аттракцион для туристов, <br class="only-desktop">там течет своя жизнь
             </p>
           </div>
 
@@ -71,21 +77,21 @@
             <li class="small-city-benefits__item  small-city-benefits__item--housing">
               <b class="small-city-benefits__item-title">Жилье</b>
               <p class="small-city-benefits__item-desc">
-                Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </li>
 
             <li class="small-city-benefits__item  small-city-benefits__item--souvenir">
               <b class="small-city-benefits__item-title">Сувениры</b>
               <p class="small-city-benefits__item-desc">
-                Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!
+                Не только китайского, <br class="mobile-hidden">но и местного производства!
               </p>
             </li>
 
             <li class="small-city-benefits__item  small-city-benefits__item--food">
               <b class="small-city-benefits__item-title">Еда</b>
               <p class="small-city-benefits__item-desc">
-                Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;НЕ&nbsp;разочаруетесь!
+                Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
               </p>
             </li>
           </ul>
@@ -98,7 +104,7 @@
             <span class="advantage__number">№2</span>
 
             <p class="advantage__desc">
-              Да, по нему можно пройти! Если вы осмелитесь, конечно
+              Да, по нему можно пройти! <br class="only-desktop">Если вы осмелитесь, конечно
             </p>
           </div>
 
@@ -125,8 +131,7 @@
             <span class="advantage__number">№4</span>
 
             <p class="advantage__desc">
-              Ехать в&nbsp;седону из&nbsp;<nobr>Лас-Вегаса</nobr>
-              совсем НЕ&nbsp;СКУЧНО!
+              Ехать в&nbsp;седону из <nobr>Лас-Вегаса</nobr> <br class="only-mobile">совсем НЕ&nbsp;СКУЧНО!
             </p>
           </section>
 
@@ -136,7 +141,7 @@
             <span class="advantage__number">№5</span>
 
             <p class="advantage__desc">
-              Большинство едет в&nbsp;гранд каньон и&nbsp;толпится там
+              Большинство едет в гранд каньон <br class="only-mobile">и толпится там
             </p>
           </section>
         </div>
@@ -149,7 +154,7 @@
           </p>
 
           <p class="find-apartment-suggestion__text">
-            Укажите предполагаемые даты поездки,
+            Укажите предполагаемые даты поездки, <br class="mobile-hidden">
             и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;седоне
           </p>
 

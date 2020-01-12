@@ -15,8 +15,8 @@
 }
 
 .promo-video__text {
-  padding-left: $section-side-padding;
-  padding-right: $section-side-padding;
+  padding-left: 22px;
+  padding-right: 22px;
   margin-top: 26px;
 
   font-size: 14px;
@@ -42,12 +42,14 @@
 
   .promo-video__text {
     max-width: 440px;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 26px;
   }
 
   .promo-video__player {
-    margin-top: 75px;
+    margin-top: 73px;
     margin-left: 60px;
     margin-right: 60px;
     height: 500px;

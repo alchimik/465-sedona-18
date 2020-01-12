@@ -63,6 +63,17 @@
   font-weight: bold;
   line-height: 1.44;
   padding: 15px 20px;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active,
+  &:focus {
+    background-color: white;
+    border: solid 4px #e5e5e5;
+    outline: none;
+  }
 }
 
 .feedback-form__submit-button {
@@ -123,9 +134,11 @@
   }
 
   .feedback-form__fieldset--submit {
+    display: flex;
+    justify-content: space-between;
     padding-top: 33px;
     padding-bottom: 64px;
-    position: relative;
+    align-items: baseline;
   }
 
   .feedback-form__fieldset-title {
@@ -142,12 +155,8 @@
     width: 324px;
   }
 
-  // костыль. Кажется fieldset нельзя сделать display: flex
   .feedback-form__required-field-help {
-    display: inline-block;
-    position: absolute;
-    right: 60px;
-    top: 51px;
+    display: initial;
     font-size: 14px;
     line-height: 26px;
   }
@@ -155,7 +164,21 @@
 
 
 @media (min-width: 1200px) {
+  .feedback-form__fieldset--rating {
+    .feedback-form__fieldset-title {
+      text-align: center;
+    }
+  }
+
+  .feedback-form__fieldset--name {
+    padding-left: 80px;
+  }
+
   .feedback-form__fieldset--contacts {
+    .feedback-form__fieldset-title {
+      padding-bottom: 75px;
+    }
+
     .text-input {
       width: 50%;
       float: left;
@@ -166,5 +189,9 @@
         padding-right: 0;
       }
     }
+  }
+
+  .feedback-form__submit-button {
+    width: 480px;
   }
 }

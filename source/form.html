@@ -20,12 +20,18 @@
                 <img src="./img/logo-sedona-mobile.svg" alt="City of SEDONA (LOGO)">
               </a>
             </li>
-            <li class="site-nav__item"><a>Форма Отзыва</a></li>
+            <li class="site-nav__item  site-nav__item--active"><a>Форма Отзыва</a></li>
             <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
           </ul>
 
           <button class="site-nav__toggler" type="button">
-            Открыть/Закрыть меню сайта
+            <span class="site-nav__toggler-inner">
+              <span class="site-nav__toggler-line"></span>
+              <span class="site-nav__toggler-line"></span>
+              <span class="site-nav__toggler-line"></span>
+            </span>
+
+            <span class="visually-hidden">Открыть/Закрыть меню сайта</span>
           </button>
         </nav>
 
@@ -100,19 +106,19 @@
             <div class="feedback-form__fieldset-title"><span>Ваше Общее впечатление:</span></div>
 
             <div class="radio-input-list">
-              <div class="radio-input  radio-input-list__item">
+              <div class="checkbox-input  checkbox-input--radio  radio-input-list__item">
                 <input type="radio" name="score" value="1" checked
                   id="feedback-form__score-1">
                 <label for="feedback-form__score-1">Скорее положительное</label>
               </div>
 
-              <div class="radio-input  radio-input-list__item">
+              <div class="checkbox-input  checkbox-input--radio  radio-input-list__item">
                 <input type="radio" name="score" value="2"
                   id="feedback-form__score-2">
                 <label for="feedback-form__score-2">Скорее отрицательное</label>
               </div>
 
-              <div class="radio-input  radio-input-list__item">
+              <div class="checkbox-input  checkbox-input--radio  radio-input-list__item">
                 <input type="radio" name="score" value="3"
                   id="feedback-form__score-3">
                 <label for="feedback-form__score-3">Затрудняюсь ответить</label>
@@ -154,8 +160,8 @@
             <div class="feedback-form__fieldset-title"><span>Опишите свои эмоции:</span></div>
 
             <label class="visually-hidden" for="feedback-form__review">Отзыв</label>
-            <textarea class="feedback-form__review" name="review"
-              id="feedback-form__review">Опишите подробно все свои восторги</textarea>
+            <textarea class="feedback-form__review" name="review" placeholder="Опишите подробно все свои восторги"
+              id="feedback-form__review"></textarea>
           </div>
 
           <div class="feedback-form__fieldset  feedback-form__fieldset--submit">

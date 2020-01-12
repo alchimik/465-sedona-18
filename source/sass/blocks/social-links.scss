@@ -13,4 +13,13 @@
   &:last-of-type {
     margin-right: 0;
   }
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: $white-30;
+  }
 }
