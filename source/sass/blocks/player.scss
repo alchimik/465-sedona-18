@@ -1,0 +1,137 @@
+.player__display {
+  height: 201px;
+  background-color: red; // TODO tmp
+}
+
+.player__panel {
+  height: 66px;
+  background-color: #e5e5e5; // todo проверить
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  padding: 0 13px 0 15px;
+}
+
+.player__volume {
+  position: absolute;
+  height: 45px;
+  top: -45px;
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 0;
+  right: 0;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.player__volume-line {
+  width: 100%;
+  position: relative;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.player__volume-knob {
+  position: absolute;
+  display: flex;
+  width: 43px;
+  height: 43px;
+  top: -20px;
+  left: 25%;
+  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    height: 11px;
+    width: 11px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: auto;
+  }
+}
+
+.player__button {
+  border: none;
+  padding: 10px; // чтобы было легче попачть на мобильной версии
+  background: none;
+  outline: none;
+
+  svg {
+    display: block;
+  }
+
+  path {
+    fill: #5c6870;
+  }
+
+  &:hover path {
+    fill: rgb(51, 51, 51);
+  }
+
+  &:active path {
+    fill: rgba(51, 51, 51, 0.3);
+  }
+
+  &--replay {
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    margin-right: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  .player {
+    position: relative;
+  }
+
+  .player__display {
+    height: 500px;
+    background-color: red; // TODO tmp
+  }
+
+  .player__panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 93px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 0 31px 0 24px;
+  }
+
+  .player__volume {
+    position: initial;
+    background: transparent;
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  .player__button {
+    path {
+      fill: #ffffff;
+    }
+
+    &:hover path {
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active path {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+
+    &--replay {
+      margin-right: 10px;
+    }
+
+    &--subtitles {
+      margin-right: 11px;
+    }
+  }
+}
