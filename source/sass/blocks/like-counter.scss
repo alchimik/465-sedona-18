@@ -1,0 +1,37 @@
+.like-counter__button {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 23px;
+  height: 21px;
+  opacity: 0.3;
+  font-size: 0;
+  border: none;
+  background: red; // TODO tmp
+  padding: 0;
+}
+
+.like-counter__total {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-weight: bold;
+  // Note: line-height не соответствует макету,
+  // но кол-во ВСЕГДА показывается в одну строку, поэтому считаю это допустимым
+  line-height: 16px;
+  text-align: left;
+  color: #000000;
+  padding-left: 9px;
+}
+
+
+@media (min-width: 768px) {
+  .like-counter__total {
+    padding-left: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .like-counter__total {
+    color: white;
+  }
+}

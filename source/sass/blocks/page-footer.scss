@@ -31,11 +31,13 @@
 .page-footer__credits-text {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 8px;
 }
 
 .page-footer__credits-link {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 2px;
 }
 
 @media (min-width: 768px) {
@@ -56,7 +58,10 @@
   }
 
   .page-footer__credits-text {
-    margin-right: 7px;
     margin-left: 10px;
+  }
+
+  .page-footer__hashtag {
+    padding-bottom: 4px;
   }
 }

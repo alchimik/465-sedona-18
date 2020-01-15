@@ -9,15 +9,16 @@
   }
 
   label {
-    display: inline-block;
-    vertical-align: middle;
     margin-bottom: 4px;
-    margin-left: 78px;
+    padding-left: 78px;
     text-transform: none;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.44;
-    letter-spacing: normal;
+    color: #000000;
+    height: inherit;
+    display: flex;
+    align-items: center;
 
     &::before {
       content: "";
@@ -26,10 +27,18 @@
       vertical-align: middle;
       width: 56px;
       height: 56px;
-      left: 0;
       top: 0;
+      left: 0;
       background-color: #f2f2f2;
       border-radius: 5px;
+    }
+
+    &:hover::before {
+      background-color: #e5e5e5;
+    }
+
+    &:active::before {
+      background-color: #d5d5d5;
     }
   }
 
@@ -43,5 +52,37 @@
     top: 18px; // TODO временно
     left: 18px; // TODO временно
     color: #333333; // TODO временно
+  }
+}
+
+.checkbox-input--radio {
+  label {
+    margin-bottom: 0;
+
+    &::before {
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      top: 18px;
+      left: 18px;
+      background-color: #333333;
+      border-radius: 50%;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+      display: inline-block;
+    }
+  }
+
+  input:checked + label::after {
+    display: inline-block;
   }
 }

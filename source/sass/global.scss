@@ -5,31 +5,43 @@ body {
   text-transform: uppercase;
 }
 
-
-.container {
-  min-width: 320px;
-  max-width: 450px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 768px;
-    max-width: unset;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-    max-width: unset;
-    margin: 0 auto;
-  }
+// дефолтный box-sizing: border-box слишком удобный, невозможно отказаться
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
   .mobile-hidden {
+    display: none;
+  }
+
+  .only-tablet {
+    display: none;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .only-mobile {
+    display: none;
+  }
+
+  .only-tablet {
     display: none;
   }
 }

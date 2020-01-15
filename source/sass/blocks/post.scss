@@ -1,14 +1,15 @@
 .post {
   margin: 0;
   padding-top: 22px;
-  padding-bottom: 16px;
+  padding-bottom: 22px;
+  min-height: 414px;
 }
 
 .post__img-wrapper {
   background-color: red; // TODO tmp
   position: relative;
   overflow: hidden;
-  height: 267px;
+  height: 280px;
 }
 
 .post__img {
@@ -16,8 +17,7 @@
 }
 
 .post__footer {
-  padding-top: 28px;
-  box-sizing: border-box;
+  padding-top: 14px;
 }
 
 .post__title {
@@ -33,15 +33,18 @@
   text-transform: none;
   line-height: 1.71;
   color: $black;
+  display: inline-block;
+  margin-top: 2px;
 }
 
 .post__likes {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 @media (min-width: 768px) {
   .post {
     padding: 0;
+    min-height: unset;
   }
 
   .post__img-wrapper {
@@ -65,8 +68,9 @@
 
   .post__likes {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 21px;
+    width: 75px;
   }
 }
 
