@@ -1,5 +1,5 @@
 .small-city-benefits {
-  padding: 27px $section-side-padding 17px $section-side-padding;
+  padding: 20px $section-side-padding 24px $section-side-padding;
 }
 
 .small-city-benefits__list {
@@ -9,7 +9,26 @@
 }
 
 .small-city-benefits__item {
-  padding: 8px 0 7px 49px;
+  padding: 15px 0 0 49px;
+  background-repeat: no-repeat;
+
+  &--housing {
+    background-image: url("/img/icon-house.svg");
+    background-size: 37px auto;
+    background-position: 2px 7px;
+  }
+
+  &--souvenir {
+    background-image: url("/img/icon-gift.svg");
+    background-size: 32px auto;
+    background-position: 5px 5px;
+  }
+
+  &--food {
+    background-image: url("/img/icon-burger.svg");
+    background-size: 38px auto;
+    background-position: 0 10px;
+  }
 }
 
 .small-city-benefits__item-title {
@@ -38,6 +57,21 @@
     width: 33.3%;
     text-align: center;
     padding: 158px 45px 48px 45px;
+
+    &--housing {
+      background-size: 75px auto;
+      background-position: center 60px;
+    }
+
+    &--souvenir {
+      background-size: 64px auto;
+      background-position: center 56px;
+    }
+
+    &--food {
+      background-size: 75px auto;
+      background-position: center 63px;
+    }
   }
 
   .small-city-benefits__item--souvenir {

@@ -43,6 +43,29 @@
   }
 }
 
+.text-input--with-icon {
+  position: relative;
+
+  input {
+    padding-right: 78px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    bottom: 0;
+    right: 0;
+    background-image: url("/img/icon-mail.svg");
+    background-color: #e6e6e6;
+    background-size: 18px 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
 .text-input--email {
   margin-top: 13px;
 
@@ -50,6 +73,10 @@
     margin-bottom: 6px;
     padding-left: 22px;
     width: 100%;
+  }
+
+  &::after {
+    background-image: url("/img/icon-mail.svg");
   }
 }
 
@@ -60,6 +87,10 @@
     margin-bottom: 6px;
     padding-left: 22px;
     width: 100%;
+  }
+
+  &::after {
+    background-image: url("/img/icon-phone.svg");
   }
 }
 
@@ -75,14 +106,20 @@
 
 @media (min-width: 1200px) {
   .text-input--email {
+    width: 502px;
+
     label {
       width: auto;
     }
   }
 
   .text-input--phone {
+    width: 400px;
+    margin-right: 58px;
+
     label {
       width: auto;
+      padding-left: 0;
     }
   }
 }

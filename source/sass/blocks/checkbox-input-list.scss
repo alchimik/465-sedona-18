@@ -1,8 +1,10 @@
-.checkbox-input-list__item {
-  margin-top: 24px;
+@media (max-width: 767px) {
+  .checkbox-input-list__item {
+    margin-top: 24px;
 
-  &:first-of-type {
-    margin-top: 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
 
@@ -18,20 +20,17 @@
   .checkbox-input-list__item {
     width: 200px;
     margin-top: 32px;
-
-    &:first-of-type {
-      margin-top: 32px; // костыль
-    }
   }
 }
 
 @media (min-width: 1200px) {
   .checkbox-input-list {
-    margin: 0;
+    margin-top: 32px;
     width: auto;
   }
 
   .checkbox-input-list__item {
-    width: 212px;
+    width: auto;
+    margin-top: 0;
   }
 }

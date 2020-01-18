@@ -18,3 +18,21 @@
     padding-left: $section-side-padding--desktop;
   }
 }
+
+
+@mixin content-image-align {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: 768px) {
+    position: initial;
+    left: unset;
+    top: unset;
+    transform: unset;
+  }
+}

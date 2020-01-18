@@ -123,13 +123,15 @@
     padding-top: 23px;
 
     .feedback-form__fieldset-title {
-      padding-bottom: 13px;
+      margin-bottom: 13px;
+      padding-bottom: 0;
     }
   }
 
   .feedback-form__fieldset--review {
     .feedback-form__fieldset-title {
-      padding-bottom: 60px;
+      margin-bottom: 60px;
+      padding-bottom: 0;
     }
   }
 
@@ -144,10 +146,28 @@
   .feedback-form__fieldset-title {
     font-size: 21px;
     line-height: 26px;
+    position: relative;
 
-    span {
-      display: inline-block;
-      max-width: 350px;
+    &--decorated {
+      span {
+        display: inline-block;
+        position: relative;
+        background-color: white;
+        padding: 0 60px;
+      }
+
+      // декоративная горизонтальная линия
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 50%;
+        right: 0;
+        height: 1px;
+        transform: translateY(-50%); // note необходимость сомнительна
+        background-color: #e5e5e5;
+      }
     }
   }
 
@@ -165,8 +185,21 @@
 
 @media (min-width: 1200px) {
   .feedback-form__fieldset--rating {
+    position: relative;
+
     .feedback-form__fieldset-title {
       text-align: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 42px;
+      bottom: 28px;
+      width: 1px;
+      background-color: #e5e5e5;
     }
   }
 
@@ -176,14 +209,13 @@
 
   .feedback-form__fieldset--contacts {
     .feedback-form__fieldset-title {
-      padding-bottom: 75px;
+      margin-bottom: 75px;
+      padding-bottom: 0;
     }
 
     .text-input {
-      width: 50%;
       float: left;
       margin-top: 0;
-      padding-right: 60px;
 
       &:last-of-type {
         padding-right: 0;

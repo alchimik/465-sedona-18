@@ -1,6 +1,12 @@
 .player__display {
   height: 201px;
   background-color: red; // TODO tmp
+  position: relative;
+  overflow: hidden;
+}
+
+.player__preview {
+  @include content-image-align;
 }
 
 .player__panel {
@@ -92,7 +98,6 @@
 
   .player__display {
     height: 500px;
-    background-color: red; // TODO tmp
   }
 
   .player__panel {

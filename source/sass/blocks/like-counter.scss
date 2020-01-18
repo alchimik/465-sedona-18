@@ -6,7 +6,10 @@
   opacity: 0.3;
   font-size: 0;
   border: none;
-  background: red; // TODO tmp
+  background-image: url("/img/icon-like--black.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
   padding: 0;
 }
 
@@ -31,6 +34,11 @@
 }
 
 @media (min-width: 1200px) {
+  .like-counter__button {
+    background-image: url("/img/icon-like--white.svg");
+    opacity: 1;
+  }
+
   .like-counter__total {
     color: white;
   }
