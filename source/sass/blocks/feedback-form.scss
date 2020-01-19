@@ -56,23 +56,28 @@
   min-height: 160px;
   background-color: #f2f2f2;
   width: 100%;
-  border: none;
+  border: solid 4px #f2f2f2;
   resize: vertical;
 
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
-  padding: 15px 20px;
+  padding: 11px 18px;
 
   &:hover {
     background-color: #e5e5e5;
+    border-color: #e5e5e5;
   }
 
   &:active,
   &:focus {
     background-color: white;
-    border: solid 4px #e5e5e5;
+    border-color: #e5e5e5;
     outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3); // TODO проверить что это нужно
   }
 }
 
@@ -102,11 +107,23 @@
   .feedback-form__fieldset--rating {
     order: -1;
     width: 50%;
+    position: relative;
     padding-right: 40px;
 
     .feedback-form__fieldset-title {
       text-align: left;
       padding-bottom: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 42px;
+      bottom: 28px;
+      width: 1px;
+      background-color: #e5e5e5;
     }
   }
 
@@ -185,21 +202,8 @@
 
 @media (min-width: 1200px) {
   .feedback-form__fieldset--rating {
-    position: relative;
-
     .feedback-form__fieldset-title {
       text-align: center;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      right: 0;
-      top: 42px;
-      bottom: 28px;
-      width: 1px;
-      background-color: #e5e5e5;
     }
   }
 
@@ -221,6 +225,10 @@
         padding-right: 0;
       }
     }
+  }
+
+  .feedback-form__fieldset--submit {
+    padding-bottom: 69px;
   }
 
   .feedback-form__submit-button {

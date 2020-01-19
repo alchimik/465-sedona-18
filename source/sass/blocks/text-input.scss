@@ -18,8 +18,8 @@
     padding: 0 22px;
     width: 120px;
     height: 58px;
-    border: none;
     background-color: #f2f2f2;
+    border: solid 4px #f2f2f2;
 
     font-weight: bold;
     font-size: 18px;
@@ -27,17 +27,18 @@
     color: #000000;
 
     &::placeholder {
-      color: #000000; // TODO проверить что это нужно
+      color: rgba(0, 0, 0, 0.3); // TODO проверить что это нужно
     }
 
     &:hover {
       background-color: #e5e5e5;
+      border-color: #e5e5e5;
     }
 
     &:active,
     &:focus {
       background-color: white;
-      border: solid 4px #e5e5e5;
+      border-color: #e5e5e5;
       outline: none;
     }
   }
