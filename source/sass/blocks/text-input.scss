@@ -59,7 +59,7 @@
     height: 58px;
     bottom: 0;
     right: 0;
-    background-image: url("/img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
     background-color: #e6e6e6;
     background-size: 18px 18px;
     background-position: center center;
@@ -77,7 +77,7 @@
   }
 
   &::after {
-    background-image: url("/img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
   }
 }
 
@@ -91,7 +91,7 @@
   }
 
   &::after {
-    background-image: url("/img/icon-phone.svg");
+    background-image: url("../img/icon-phone.svg");
   }
 }
 

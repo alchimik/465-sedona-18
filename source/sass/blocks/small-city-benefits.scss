@@ -13,19 +13,19 @@
   background-repeat: no-repeat;
 
   &--housing {
-    background-image: url("/img/icon-house.svg");
+    background-image: url("../img/icon-house.svg");
     background-size: 37px auto;
     background-position: 2px 7px;
   }
 
   &--souvenir {
-    background-image: url("/img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
     background-size: 32px auto;
     background-position: 5px 5px;
   }
 
   &--food {
-    background-image: url("/img/icon-burger.svg");
+    background-image: url("../img/icon-burger.svg");
     background-size: 38px auto;
     background-position: 0 10px;
   }
