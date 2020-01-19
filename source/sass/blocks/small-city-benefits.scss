@@ -66,16 +66,13 @@
     &--souvenir {
       background-size: 64px auto;
       background-position: center 56px;
+      order: 10;
     }
 
     &--food {
       background-size: 75px auto;
       background-position: center 63px;
     }
-  }
-
-  .small-city-benefits__item--souvenir {
-    order: 10;
   }
 
   .small-city-benefits__item-title {
