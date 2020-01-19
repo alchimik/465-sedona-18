@@ -6,7 +6,7 @@
   background-size: 100% auto;
   padding-top: 5.3%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-width) {
     display: none;
   }
 }

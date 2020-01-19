@@ -10,24 +10,24 @@
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-width) {
     height: 290px;
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
     background-size: 768px auto, 768px 518px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
-  @media (min-width: 768px) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
-  }
-
-  @media (min-width: 1200px) {
+  @media (min-width: $min-desktop-width) {
     height: 301px;
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
     background-size: 1200px auto, 1200px 518px;
-  }
 
-  @media (min-width: 1200px) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 }
 
@@ -36,12 +36,12 @@
   margin: 50px auto 0 auto;
   display: block;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-width) {
     width: 460px;
     margin-top: 94px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $min-desktop-width) {
     margin-top: 101px;
   }
 }

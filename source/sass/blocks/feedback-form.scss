@@ -92,7 +92,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +200,7 @@
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: $min-desktop-width) {
   .feedback-form__fieldset--rating {
     .feedback-form__fieldset-title {
       text-align: center;

@@ -152,7 +152,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $max-mobile-width) {
   // меню может скрываться только на мобильной версии сайта
   .site-nav--closed {
     height: 56px; // см. примечание 1
@@ -165,7 +165,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .site-nav {
     padding-bottom: 0;
     height: auto;
@@ -240,7 +240,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $min-desktop-width) {
   .site-nav__item {
     width: 239px;
   }

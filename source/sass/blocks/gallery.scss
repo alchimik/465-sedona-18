@@ -36,7 +36,7 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .gallery {
     padding-top: 53px;
     border: none;
@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $min-desktop-width) {
   .gallery {
     padding-top: 90px;
   }

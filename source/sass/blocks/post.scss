@@ -42,7 +42,7 @@
   margin-top: 6px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .post {
     padding: 0;
     min-height: unset;
@@ -79,7 +79,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $min-desktop-width) {
   .post {
     position: relative;
   }

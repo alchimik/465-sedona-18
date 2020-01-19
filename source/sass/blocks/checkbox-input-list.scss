@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: $max-mobile-width) {
   .checkbox-input-list__item {
     margin-top: 24px;
 
@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .checkbox-input-list {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $min-desktop-width) {
   .checkbox-input-list {
     margin-top: 42px;
     width: auto;

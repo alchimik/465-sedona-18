@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .player {
     position: relative;
   }

@@ -6,17 +6,17 @@
   background-color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $min-tablet-width) {
   .container {
-    width: 768px;
+    width: $min-tablet-width;
     max-width: unset;
     margin: 0 auto;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $min-desktop-width) {
   .container {
-    width: 1200px;
+    width: $min-desktop-width;
     max-width: unset;
     margin: 0 auto;
   }

@@ -8,12 +8,12 @@
   padding-right: $section-side-padding;
   padding-left: $section-side-padding;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-width) {
     padding-right: $section-side-padding--tablet;
     padding-left: $section-side-padding--tablet;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $min-desktop-width) {
     padding-right: $section-side-padding--desktop;
     padding-left: $section-side-padding--desktop;
   }
@@ -29,7 +29,7 @@
   width: 100%;
   height: auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-tablet-width) {
     position: initial;
     left: unset;
     top: unset;
