@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .player {
     position: relative;
   }

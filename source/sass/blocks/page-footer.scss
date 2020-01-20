@@ -41,7 +41,7 @@
   margin-top: 2px;
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .page-footer {
     display: flex;
     justify-content: space-between;

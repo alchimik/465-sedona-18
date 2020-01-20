@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .advantage {
     padding: 44px 45px 30px 45px;
     min-height: 256px;
@@ -65,7 +65,7 @@
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@include for-desktop {
   .advantage--primary {
     padding-top: 51px;
   }

@@ -17,7 +17,7 @@
   }
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .advantage-with-photo {
     display: flex;
     padding-top: 0;

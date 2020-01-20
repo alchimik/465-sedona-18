@@ -36,7 +36,7 @@
 }
 
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .gallery {
     padding-top: 53px;
     border: none;
@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@include for-desktop {
   .gallery {
     padding-top: 90px;
   }

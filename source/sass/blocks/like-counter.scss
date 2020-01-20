@@ -27,13 +27,13 @@
 }
 
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .like-counter__total {
     padding-left: 5px;
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@include for-desktop {
   .like-counter__button {
     background-image: url("../img/icon-like--white.svg");
     opacity: 1;

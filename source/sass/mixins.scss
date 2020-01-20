@@ -5,20 +5,21 @@
 }
 
 @mixin default-side-padding {
-  padding-right: $section-side-padding;
-  padding-left: $section-side-padding;
+  @include for-mobile {
+    padding-right: $section-side-padding;
+    padding-left: $section-side-padding;
+  }
 
-  @media (min-width: $min-tablet-width) {
+  @include for-tablet {
     padding-right: $section-side-padding--tablet;
     padding-left: $section-side-padding--tablet;
   }
 
-  @media (min-width: $min-desktop-width) {
+  @include for-desktop {
     padding-right: $section-side-padding--desktop;
     padding-left: $section-side-padding--desktop;
   }
 }
-
 
 @mixin content-image-align {
   position: absolute;
@@ -29,10 +30,34 @@
   width: 100%;
   height: auto;
 
-  @media (min-width: $min-tablet-width) {
+  @include for-tablet-and-desktop {
     position: initial;
     left: unset;
     top: unset;
     transform: unset;
+  }
+}
+
+@mixin for-mobile {
+  @media (max-width: $max-mobile-width) {
+    @content;
+  }
+}
+
+@mixin for-tablet-and-desktop {
+  @media (min-width: $min-tablet-width) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: $min-desktop-width) {
+    @content;
   }
 }

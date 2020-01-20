@@ -6,7 +6,7 @@
   background-color: white;
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .container {
     width: $min-tablet-width;
     max-width: unset;
@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@include for-desktop {
   .container {
     width: $min-desktop-width;
     max-width: unset;

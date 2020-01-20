@@ -44,7 +44,7 @@
   color: $black;
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .small-city-benefits {
     padding: 0;
   }
@@ -87,7 +87,7 @@
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@include for-desktop {
   .small-city-benefits__item {
     padding: 158px 50px 69px 50px;
   }

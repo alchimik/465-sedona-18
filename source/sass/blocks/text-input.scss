@@ -95,7 +95,7 @@
   }
 }
 
-@media (min-width: $min-tablet-width) {
+@include for-tablet-and-desktop {
   .text-input--email {
     margin-top: 25px;
   }
@@ -105,7 +105,7 @@
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@include for-desktop {
   .text-input--email {
     width: 502px;
 
