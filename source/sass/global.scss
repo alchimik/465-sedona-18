@@ -3,6 +3,7 @@ body {
   min-width: 320px;
   // почти весь текст на сайте отображается как "uppercase"
   text-transform: uppercase;
+  background-color: #f2f2f2;
 }
 
 // дефолтный box-sizing: border-box слишком удобный, невозможно отказаться
@@ -12,7 +13,7 @@ body {
   box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
+@include for-mobile {
   .mobile-hidden {
     display: none;
   }
@@ -26,7 +27,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   .only-desktop {
     display: none;
   }
@@ -36,12 +37,16 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .only-mobile {
     display: none;
   }
 
   .only-tablet {
+    display: none;
+  }
+
+  .desktop-hidden {
     display: none;
   }
 }

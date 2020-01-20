@@ -1,26 +1,23 @@
-.advantage-with-photo {
-  &--first {
-    padding-top: 17px; // место под декоративный треугольник
-  }
-}
-
 .advantage-with-photo__advantage {
   box-sizing: border-box;
 }
 
 .advantage-with-photo__photo {
   height: 260px;
-  background-color: red; // TODO tmp
+  background-color: #81b3d2;
   overflow: hidden;
   position: relative;
 
   img {
     display: block;
-    position: absolute; // TODO tmp
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .advantage-with-photo {
     display: flex;
     padding-top: 0;

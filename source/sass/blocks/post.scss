@@ -6,6 +6,7 @@
 }
 
 .post__img-wrapper {
+  display: block;
   background-color: red; // TODO tmp
   position: relative;
   overflow: hidden;
@@ -13,7 +14,7 @@
 }
 
 .post__img {
-  position: absolute;
+  @include content-image-align;
 }
 
 .post__footer {
@@ -41,7 +42,7 @@
   margin-top: 6px;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .post {
     padding: 0;
     min-height: unset;
@@ -66,6 +67,10 @@
     position: relative;
   }
 
+  .post__author {
+    margin-top: 1px;
+  }
+
   .post__likes {
     position: absolute;
     right: 10px;
@@ -74,7 +79,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .post {
     position: relative;
   }

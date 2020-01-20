@@ -1,14 +1,23 @@
 .social-links {
   @include reset-list;
   font-size: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .social-links__item {
   width: 46px;
   height: 48px;
-  display: inline-block;
+  vertical-align: top;
   background-color: $light-grey-blue;
   margin-right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  path {
+    fill: #ffffff;
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -20,6 +29,9 @@
 
   &:active {
     background-color: #5496bd;
-    color: $white-30;
+
+    path {
+      fill: rgba(255, 255, 255, 0.3);
+    }
   }
 }

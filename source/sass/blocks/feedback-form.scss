@@ -56,23 +56,28 @@
   min-height: 160px;
   background-color: #f2f2f2;
   width: 100%;
-  border: none;
+  border: solid 4px #f2f2f2;
   resize: vertical;
 
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
-  padding: 15px 20px;
+  padding: 11px 18px;
 
   &:hover {
     background-color: #e5e5e5;
+    border-color: #e5e5e5;
   }
 
   &:active,
   &:focus {
     background-color: white;
-    border: solid 4px #e5e5e5;
+    border-color: #e5e5e5;
     outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3); // TODO проверить что это нужно
   }
 }
 
@@ -87,7 +92,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
@@ -102,11 +107,23 @@
   .feedback-form__fieldset--rating {
     order: -1;
     width: 50%;
+    position: relative;
     padding-right: 40px;
 
     .feedback-form__fieldset-title {
       text-align: left;
       padding-bottom: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 42px;
+      bottom: 28px;
+      width: 1px;
+      background-color: #e5e5e5;
     }
   }
 
@@ -123,13 +140,15 @@
     padding-top: 23px;
 
     .feedback-form__fieldset-title {
-      padding-bottom: 13px;
+      margin-bottom: 13px;
+      padding-bottom: 0;
     }
   }
 
   .feedback-form__fieldset--review {
     .feedback-form__fieldset-title {
-      padding-bottom: 60px;
+      margin-bottom: 60px;
+      padding-bottom: 0;
     }
   }
 
@@ -144,10 +163,28 @@
   .feedback-form__fieldset-title {
     font-size: 21px;
     line-height: 26px;
+    position: relative;
 
-    span {
-      display: inline-block;
-      max-width: 350px;
+    &--decorated {
+      span {
+        display: inline-block;
+        position: relative;
+        background-color: white;
+        padding: 0 60px;
+      }
+
+      // декоративная горизонтальная линия
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 50%;
+        right: 0;
+        height: 1px;
+        transform: translateY(-50%); // note необходимость сомнительна
+        background-color: #e5e5e5;
+      }
     }
   }
 
@@ -163,7 +200,7 @@
 }
 
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .feedback-form__fieldset--rating {
     .feedback-form__fieldset-title {
       text-align: center;
@@ -176,19 +213,22 @@
 
   .feedback-form__fieldset--contacts {
     .feedback-form__fieldset-title {
-      padding-bottom: 75px;
+      margin-bottom: 75px;
+      padding-bottom: 0;
     }
 
     .text-input {
-      width: 50%;
       float: left;
       margin-top: 0;
-      padding-right: 60px;
 
       &:last-of-type {
         padding-right: 0;
       }
     }
+  }
+
+  .feedback-form__fieldset--submit {
+    padding-bottom: 69px;
   }
 
   .feedback-form__submit-button {

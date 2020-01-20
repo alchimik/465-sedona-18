@@ -23,7 +23,7 @@
   margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .index-page-intro {
     padding-top: 49px;
     padding-bottom: 50px;

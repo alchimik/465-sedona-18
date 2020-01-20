@@ -28,9 +28,9 @@
   margin-top: 35px;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .promo-video {
-    padding-top: 65px;
+    padding-top: 64px;
   }
 
   .promo-video__title {
@@ -43,7 +43,7 @@
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 26px;
+    margin-top: 29px;
   }
 
   .promo-video__player {
@@ -53,9 +53,10 @@
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .promo-video {
-    padding-bottom: 90px;
+    padding-top: 68px;
+    padding-bottom: 88px;
   }
 
   .promo-video__text {
@@ -63,7 +64,7 @@
   }
 
   .promo-video__player {
-    margin-top: 72px;
+    margin-top: 70px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;

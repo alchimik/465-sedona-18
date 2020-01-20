@@ -1,4 +1,4 @@
-.checkbox-input {
+.switch-input {
   height: 56px;
   position: relative;
   display: flex;
@@ -41,21 +41,27 @@
       background-color: #d5d5d5;
     }
   }
+}
 
+.switch-input--checkbox {
   input:checked + label::after {
-    content: "v"; // TODO временно
+    content: "";
     position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    top: 18px; // TODO временно
-    left: 18px; // TODO временно
-    color: #333333; // TODO временно
+    display: block;
+    width: 24px;
+    height: 16px;
+    top: 20px;
+    left: 16px;
+    color: #333333;
+    background-image: url("../img/icon-tick.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
   }
 }
 
-.checkbox-input--radio {
+.switch-input--radio {
   label {
     margin-bottom: 0;
 

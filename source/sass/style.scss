@@ -5,6 +5,7 @@
 @import "./global";
 // БЭМ Блоки
 @import "./blocks/container";
+@import "./blocks/decorative-triangle";
 @import "./blocks/advantage";
 @import "./blocks/advantage-with-photo";
 @import "./blocks/advantage-list";
@@ -27,7 +28,7 @@
 @import "./blocks/social-links";
 @import "./blocks/text-input";
 @import "./blocks/radio-input-list";
-@import "./blocks/checkbox-input";
+@import "./blocks/switch-input";
 @import "./blocks/checkbox-input-list";
 @import "./blocks/visually-hidden";
 @import "./blocks/like-counter";

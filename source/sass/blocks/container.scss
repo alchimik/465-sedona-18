@@ -2,19 +2,21 @@
   min-width: 320px;
   max-width: 450px;
   margin: 0 auto;
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  background-color: white;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .container {
-    width: 768px;
+    width: $min-tablet-width;
     max-width: unset;
     margin: 0 auto;
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .container {
-    width: 1200px;
+    width: $min-desktop-width;
     max-width: unset;
     margin: 0 auto;
   }

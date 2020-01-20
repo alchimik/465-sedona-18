@@ -1,8 +1,17 @@
 .htmlacademy-logo {
-  font-size: 0;
   width: 27px;
   height: 34px;
   display: inline-block;
 
-  background-color: gray; // TODO tmp
+  path {
+    fill: #000000;
+  }
+
+  &:hover path {
+    fill: #81b3d2;
+  }
+
+  &:active path {
+    fill: rgba(0, 0, 0, 0.3);
+  }
 }

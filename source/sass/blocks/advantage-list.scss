@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .advantage-list {
     display: flex;
   }

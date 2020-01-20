@@ -1,11 +1,24 @@
+// примечание 1
+// меню .site-nav сделано фиксированной высоты, чтобы по простому добавить анимацию выезжания меню сверху
+// кол-во элементов в меню фиксированное, дизан не предполагает возможности
+//    добавления нового элемента мен без изменения дизайне, что также позволяет захардкодить высоту меню
+
 .site-nav {
-  padding-bottom: 56px;
   background-color: white;
   position: relative;
+  height: 280px; // см. примечание 1 в начале файла
+
+  &--animated {
+    transition: height 0.5s; // см. примечание 1
+  }
 }
 
+
 .site-nav__list {
-  position: relative;
+  position: absolute; // см. примечание 1
+  bottom: 56px; // см. примечание 1
+  left: 0; // см. примечание 1
+  right: 0; // см. примечание 1
 
   @include reset-list;
 }
@@ -30,7 +43,7 @@
     line-height: 40px;
     color: inherit;
     text-decoration: none;
-    border-bottom: solid 1px gray; // TODO заменить цвет на правильный
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2); // TODO заменить цвет на правильный
   }
 
   &:first-of-type {
@@ -39,6 +52,10 @@
       padding-right: 60px;
       padding-left: 60px;
     }
+  }
+
+  &:last-of-type {
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -4px 4px 0 rgba(1, 1, 1, 0.2);
   }
 
   &:hover {
@@ -61,6 +78,11 @@
 
   a {
     border: none;
+  }
+
+  img {
+    width: 102px;
+    height: 83px;
   }
 }
 
@@ -134,12 +156,12 @@
   }
 }
 
-@media (max-width: 767px) {
+@include for-mobile {
   // меню может скрываться только на мобильной версии сайта
   .site-nav--closed {
-    .site-nav__item {
-      display: none;
+    height: 56px; // см. примечание 1
 
+    .site-nav__item {
       &--site-logo {
         display: block;
       }
@@ -147,13 +169,18 @@
   }
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .site-nav {
     padding-bottom: 0;
+    height: auto;
   }
 
   .site-nav__list {
     display: flex;
+    position: relative;
+    bottom: unset;
+    left: unset;
+    right: unset;
   }
 
   .site-nav__item {
@@ -161,6 +188,10 @@
     background: none;
     box-shadow: none;
     color: #000000;
+
+    &:last-of-type {
+      box-shadow: none;
+    }
 
     a {
       font-size: 14px;
@@ -213,8 +244,15 @@
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .site-nav__item {
     width: 239px;
+  }
+
+  .site-nav__item--site-logo {
+    img {
+      width: 188px;
+      height: 96px;
+    }
   }
 }

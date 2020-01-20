@@ -32,6 +32,7 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
+  color: #000000;
 }
 
 .page-footer__credits-link {
@@ -40,7 +41,7 @@
   margin-top: 2px;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .page-footer {
     display: flex;
     justify-content: space-between;

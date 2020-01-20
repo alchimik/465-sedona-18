@@ -27,7 +27,7 @@
   padding: 15px 0 17px 0;
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .find-apartment-suggestion {
     padding-top: 24px;
     padding-bottom: 58px;
@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .find-apartment-suggestion {
     padding-bottom: 64px;
   }

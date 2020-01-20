@@ -18,8 +18,8 @@
     padding: 0 22px;
     width: 120px;
     height: 58px;
-    border: none;
     background-color: #f2f2f2;
+    border: solid 4px #f2f2f2;
 
     font-weight: bold;
     font-size: 18px;
@@ -27,19 +27,43 @@
     color: #000000;
 
     &::placeholder {
-      color: #000000; // TODO проверить что это нужно
+      color: rgba(0, 0, 0, 0.3); // TODO проверить что это нужно
     }
 
     &:hover {
       background-color: #e5e5e5;
+      border-color: #e5e5e5;
     }
 
     &:active,
     &:focus {
       background-color: white;
-      border: solid 4px #e5e5e5;
+      border-color: #e5e5e5;
       outline: none;
     }
+  }
+}
+
+.text-input--with-icon {
+  position: relative;
+
+  input {
+    padding-right: 78px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/icon-mail.svg");
+    background-color: #e6e6e6;
+    background-size: 18px 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -51,6 +75,10 @@
     padding-left: 22px;
     width: 100%;
   }
+
+  &::after {
+    background-image: url("../img/icon-mail.svg");
+  }
 }
 
 .text-input--phone {
@@ -61,9 +89,13 @@
     padding-left: 22px;
     width: 100%;
   }
+
+  &::after {
+    background-image: url("../img/icon-phone.svg");
+  }
 }
 
-@media (min-width: 768px) {
+@include for-tablet-and-desktop {
   .text-input--email {
     margin-top: 25px;
   }
@@ -73,16 +105,22 @@
   }
 }
 
-@media (min-width: 1200px) {
+@include for-desktop {
   .text-input--email {
+    width: 502px;
+
     label {
       width: auto;
     }
   }
 
   .text-input--phone {
+    width: 400px;
+    margin-right: 58px;
+
     label {
       width: auto;
+      padding-left: 0;
     }
   }
 }
