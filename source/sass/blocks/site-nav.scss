@@ -7,8 +7,12 @@
   background-color: white;
   position: relative;
   height: 280px; // см. примечание 1 в начале файла
-  transition: height 0.5s; // см. примечание 1
+
+  &--animated {
+    transition: height 0.5s; // см. примечание 1
+  }
 }
+
 
 .site-nav__list {
   position: absolute; // см. примечание 1
