@@ -3,15 +3,15 @@
   height: 34px;
   display: inline-block;
 
-  path {
+  svg {
     fill: #000000;
   }
 
-  &:hover path {
+  &:hover svg {
     fill: #81b3d2;
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba(0, 0, 0, 0.3);
   }
 }

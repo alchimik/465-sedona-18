@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
 
-  path {
+  svg {
     fill: #ffffff;
   }
 
@@ -30,7 +30,7 @@
   &:active {
     background-color: #5496bd;
 
-    path {
+    svg {
       fill: rgba(255, 255, 255, 0.3);
     }
   }

@@ -68,17 +68,14 @@
 
   svg {
     display: block;
-  }
-
-  path {
     fill: #5c6870;
   }
 
-  &:hover path {
+  &:hover svg {
     fill: rgb(51, 51, 51);
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba(51, 51, 51, 0.3);
   }
 
@@ -119,15 +116,15 @@
   }
 
   .player__button {
-    path {
+    svg {
       fill: #ffffff;
     }
 
-    &:hover path {
+    &:hover svg {
       fill: rgba(255, 255, 255, 0.6);
     }
 
-    &:active path {
+    &:active svg {
       fill: rgba(255, 255, 255, 0.3);
     }
 
