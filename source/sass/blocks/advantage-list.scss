@@ -1,3 +1,24 @@
+@include for-mobile {
+  .advantage-list__item {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: #d5d5d5;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
+  }
+}
+
 @include for-tablet-and-desktop {
   .advantage-list {
     display: flex;

@@ -12,6 +12,7 @@
   }
 
   &:active svg {
-    fill: rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
+    fill: rgb(0, 0, 0);
   }
 }

@@ -31,10 +31,10 @@
   height: auto;
 
   @include for-tablet-and-desktop {
-    position: initial;
-    left: unset;
-    top: unset;
-    transform: unset;
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
   }
 }
 

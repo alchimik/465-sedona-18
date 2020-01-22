@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
     <title>HTML Academy: Седона</title>
-    <meta name="keywords" content="TODO seo">
-    <meta name="description" content="TODO seo">
+    <meta name="keywords" content="[SEO]">
+    <meta name="description" content="[SEO]">
     <link rel="stylesheet" href="css/style.css">
 
     <script>
@@ -173,8 +173,7 @@
             <span class="advantage__number">– №4 –</span>
 
             <p class="advantage__desc">
-              Ехать в&nbsp;седону из
-              <nobr>Лас-Вегаса</nobr>
+              Ехать в&nbsp;седону из Лас-Вегаса
               <br class="only-mobile">совсем НЕ&nbsp;СКУЧНО!
             </p>
           </section>
@@ -205,7 +204,6 @@
           <a class="find-apartment-suggestion__link  button" href="#">Найти гостиницу</a>
         </section>
 
-        <!-- TODO не удалось нормально указать координаты и масштаб -->
         <iframe class="sedona-map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15621.264151255386!2d-111.65426469307185!3d35.19798644927836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1574486802965!5m2!1sru!2sru"
           allowfullscreen=""></iframe>
@@ -216,32 +214,27 @@
           <a>#visitSEDONA</a>
         </div>
 
-        <div class="page-footer__social-link">
-          <ul class="social-links">
-            <li class="social-links__item  social-links__item--twitter">
-              <a href="https://twitter.com/hashtag/sedona" target="_blank" aria-label="Twitter">
-                <svg width="19" height="15">
-                  <use xlink:href='./img/sprite.svg#icon-twitter'/>
-                </svg>
-              </a>
-            </li>
+        <div class="page-footer__social-link  social-links">
+          <a class="social-links__item"
+            href="https://twitter.com/hashtag/sedona" target="_blank" aria-label="Twitter">
+            <svg width="19" height="15">
+              <use xlink:href='./img/sprite.svg#icon-twitter'/>
+            </svg>
+          </a>
 
-            <li class="social-links__item  social-links__item--facebook">
-              <a href="https://www.facebook.com/VisitSedona/" target="_blank" aria-label="Facebook">
-                <svg width="9" height="19">
-                  <use xlink:href='./img/sprite.svg#icon-facebook'/>
-                </svg>
-              </a>
-            </li>
+          <a class="social-links__item  social-links__item--facebook"
+            href="https://www.facebook.com/VisitSedona/" target="_blank" aria-label="Facebook">
+            <svg width="9" height="19">
+              <use xlink:href='./img/sprite.svg#icon-facebook'/>
+            </svg>
+          </a>
 
-            <li class="social-links__item  social-links__item--youtube">
-              <a href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">
-                <svg width="20" height="14">
-                  <use xlink:href='./img/sprite.svg#icon-youtube'/>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <a class="social-links__item"
+            href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">
+            <svg width="20" height="14">
+              <use xlink:href='./img/sprite.svg#icon-youtube'/>
+            </svg>
+          </a>
         </div>
 
         <div class="page-footer__credits">
@@ -257,6 +250,9 @@
         </div>
       </footer>
     </div>
+
+    <script src="./js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
 
     <script src="js/app.js"></script>
   </body>

@@ -27,11 +27,13 @@ function init_modal () {
   var modal_error = document.querySelector('.js-modal-error');
   var body = document.querySelector('body');
 
-  document.querySelector('.feedback-form__submit-button').addEventListener('click', function () {
-    var modal = Math.random() > 0.5 ? modal_success : modal_error;
+  document.querySelectorAll('.feedback-form__submit-button').forEach(function (elem) {
+    elem.addEventListener('click', function () {
+      var modal = Math.random() > 0.5 ? modal_success : modal_error;
 
-    modal.classList.add('modal--open');
-    body.classList.add('modal-is-open');
+      modal.classList.add('modal--open');
+      body.classList.add('modal-is-open');
+    });
   });
 
   document.querySelectorAll('.js-modal-close').forEach(function (elem) {

@@ -1,6 +1,6 @@
 .player__display {
   height: 201px;
-  background-color: red; // TODO tmp
+  background-color: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
 
 .player__panel {
   height: 66px;
-  background-color: #e5e5e5; // todo проверить
+  background-color: #e5e5e5;
   display: flex;
   align-items: center;
   margin-left: 20px;
@@ -109,7 +109,7 @@
   }
 
   .player__volume {
-    position: initial;
+    position: static;
     background: transparent;
     flex-grow: 1;
     margin-right: 10px;

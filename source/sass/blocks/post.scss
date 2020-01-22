@@ -7,7 +7,7 @@
 
 .post__img-wrapper {
   display: block;
-  background-color: red; // TODO tmp
+  background-color: transparent;
   position: relative;
   overflow: hidden;
   height: 280px;
@@ -45,11 +45,11 @@
 @include for-tablet-and-desktop {
   .post {
     padding: 0;
-    min-height: unset;
+    min-height: auto;
   }
 
   .post__img-wrapper {
-    background-color: red; // TODO tmp
+    background-color: transparent;
     position: relative;
     overflow: hidden;
     height: 267px;

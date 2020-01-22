@@ -9,7 +9,7 @@
 @include for-tablet-and-desktop {
   .container {
     width: $min-tablet-width;
-    max-width: unset;
+    max-width: $min-tablet-width;
     margin: 0 auto;
   }
 }
@@ -17,7 +17,7 @@
 @include for-desktop {
   .container {
     width: $min-desktop-width;
-    max-width: unset;
+    max-width: $min-desktop-width;
     margin: 0 auto;
   }
 }
