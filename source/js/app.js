@@ -1,4 +1,4 @@
-(function () {
+function init_menu () {
   var CLOSED = 'site-nav--closed';
 
   var navMain = document.querySelector('.site-nav ');
@@ -7,7 +7,7 @@
   navMain.classList.remove('site-nav--nojs');
   navMain.classList.add(CLOSED);
 
-  setTimeout(function() {
+  setTimeout(function () {
     // тут у нас маленький костыль
     // site-nav--animated включает анимацию у меню
     // не можем ставить site-nav--animated по умолчанию,
@@ -17,7 +17,34 @@
     navMain.classList.add('site-nav--animated');
   });
 
-  navToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', function () {
     navMain.classList.toggle(CLOSED);
   });
+}
+
+function init_modal () {
+  var modal_success = document.querySelector('.js-modal-success');
+  var modal_error = document.querySelector('.js-modal-error');
+  var body = document.querySelector('body');
+
+  document.querySelectorAll('.feedback-form__submit-button').forEach(function (elem) {
+    elem.addEventListener('click', function () {
+      var modal = Math.random() > 0.5 ? modal_success : modal_error;
+
+      modal.classList.add('modal--open');
+      body.classList.add('modal-is-open');
+    });
+  });
+
+  document.querySelectorAll('.js-modal-close').forEach(function (elem) {
+    elem.addEventListener('click', function () {
+      this.closest('.modal').classList.remove('modal--open');
+      body.classList.remove('modal-is-open');
+    });
+  });
+}
+
+(function () {
+  init_menu();
+  init_modal();
 })();

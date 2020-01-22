@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
     <title>HTML Academy: Седона. Форма обратной связи</title>
-    <meta name="keywords" content="TODO seo">
-    <meta name="description" content="TODO seo">
+    <meta name="keywords" content="[SEO]">
+    <meta name="description" content="[SEO]">
     <link rel="stylesheet" href="css/style.css">
 
     <script>
@@ -27,7 +27,7 @@
                   <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
                   <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
                   <img src="./img/logo-sedona-mobile.svg"
-                    sizes="(min-width: 1200px) 188px, 102px"
+                    width="102"
                     alt="City of SEDONA (LOGO)">
                 </picture>
               </a>
@@ -95,7 +95,8 @@
           </div>
 
           <div class="feedback-form__fieldset  feedback-form__fieldset--contacts">
-            <div class="feedback-form__fieldset-title  feedback-form__fieldset-title--decorated"><span>Контактная информация:</span></div>
+            <div class="feedback-form__fieldset-title  feedback-form__fieldset-title--decorated"><span>Контактная информация:</span>
+            </div>
 
             <div class="text-input  text-input--phone  text-input--with-icon">
               <label for="feedback-form__phone">
@@ -171,7 +172,8 @@
           </div>
 
           <div class="feedback-form__fieldset  feedback-form__fieldset--review">
-            <div class="feedback-form__fieldset-title  feedback-form__fieldset-title--decorated"><span>Опишите свои эмоции:</span></div>
+            <div class="feedback-form__fieldset-title  feedback-form__fieldset-title--decorated"><span>Опишите свои эмоции:</span>
+            </div>
 
             <label class="visually-hidden" for="feedback-form__review">Отзыв</label>
             <textarea class="feedback-form__review" name="review" placeholder="Опишите подробно все свои восторги"
@@ -193,32 +195,27 @@
           <a>#visitSEDONA</a>
         </div>
 
-        <div class="page-footer__social-link">
-          <ul class="social-links">
-            <li class="social-links__item  social-links__item--twitter">
-              <a href="https://twitter.com/hashtag/sedona" target="_blank" aria-label="Twitter">
-                <svg width="19" height="15">
-                  <use xlink:href='./img/sprite.svg#icon-twitter'/>
-                </svg>
-              </a>
-            </li>
+        <div class="page-footer__social-link  social-links">
+          <a class="social-links__item"
+            href="https://twitter.com/hashtag/sedona" target="_blank" aria-label="Twitter">
+            <svg width="19" height="15">
+              <use xlink:href='./img/sprite.svg#icon-twitter'/>
+            </svg>
+          </a>
 
-            <li class="social-links__item  social-links__item--facebook">
-              <a href="https://www.facebook.com/VisitSedona/" target="_blank" aria-label="Facebook">
-                <svg width="9" height="19">
-                  <use xlink:href='./img/sprite.svg#icon-facebook'/>
-                </svg>
-              </a>
-            </li>
+          <a class="social-links__item  social-links__item--facebook"
+            href="https://www.facebook.com/VisitSedona/" target="_blank" aria-label="Facebook">
+            <svg width="9" height="19">
+              <use xlink:href='./img/sprite.svg#icon-facebook'/>
+            </svg>
+          </a>
 
-            <li class="social-links__item  social-links__item--youtube">
-              <a href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">
-                <svg width="20" height="14">
-                  <use xlink:href='./img/sprite.svg#icon-youtube'/>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <a class="social-links__item"
+            href="https://www.youtube.com/watch?v=HU22peKtyfY" target="_blank">
+            <svg width="20" height="14">
+              <use xlink:href='./img/sprite.svg#icon-youtube'/>
+            </svg>
+          </a>
         </div>
 
         <div class="page-footer__credits">
@@ -234,6 +231,39 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal  modal--error  js-modal-error">
+      <div class="modal__inner">
+        <div class="modal__header">ЧТО-ТО ПОШЛО <br class="mobile-hidden">НЕ ТАК!</div>
+
+        <div class="modal__body">
+          Проверьте поля, выделенные красным,
+          скорее всего вы забыли их заполнить
+
+          <div class="modal__button-wrapper">
+            <button class="button  modal__button  modal__button--small  js-modal-close" type="button">ОК</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  modal--success  js-modal-success">
+      <div class="modal__inner">
+        <div class="modal__header">Ваш отзыв отправлен!</div>
+
+        <div class="modal__body">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+          В&nbsp;ближайшее время мы опубликуем его на сайте.
+        </div>
+
+        <div class="modal__footer">
+          <button class="button  modal__button  modal__button--big  js-modal-close" type="button">Закрыть окно</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
 
     <script src="js/app.js"></script>
   </body>

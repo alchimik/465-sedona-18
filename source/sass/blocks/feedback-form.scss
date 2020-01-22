@@ -77,7 +77,7 @@
   }
 
   &::placeholder {
-    color: rgba(0, 0, 0, 0.3); // TODO проверить что это нужно
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -193,7 +193,7 @@
   }
 
   .feedback-form__required-field-help {
-    display: initial;
+    display: block;
     font-size: 14px;
     line-height: 26px;
   }
