@@ -77,7 +77,7 @@
   }
 
   &::placeholder {
-    color: rgba(0, 0, 0, 0.3);
+    color: #000000;
   }
 }
 
@@ -155,9 +155,9 @@
   .feedback-form__fieldset--submit {
     display: flex;
     justify-content: space-between;
-    padding-top: 33px;
+    padding-top: 32px;
     padding-bottom: 64px;
-    align-items: baseline;
+    align-items: flex-start;
   }
 
   .feedback-form__fieldset-title {
@@ -196,6 +196,12 @@
     display: block;
     font-size: 14px;
     line-height: 26px;
+    padding-top: 18px;
+  }
+
+  .feedback-form__required-field-mark {
+    display: inline-block;
+    margin-right: 3px;
   }
 }
 
@@ -227,11 +233,22 @@
     }
   }
 
+  .feedback-form__fieldset--review {
+    .feedback-form__fieldset-title {
+      margin-bottom: 56px;
+    }
+  }
+
   .feedback-form__fieldset--submit {
     padding-bottom: 69px;
+    padding-top: 34px;
   }
 
   .feedback-form__submit-button {
     width: 480px;
+  }
+
+  .feedback-form__required-field-help {
+    padding-top: 19px;
   }
 }
