@@ -6,7 +6,7 @@
     <title>HTML Academy: Седона. Фото и видео</title>
     <meta name="keywords" content="[SEO]">
     <meta name="description" content="[SEO]">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <script>
       // Picture element HTML5 shiv
@@ -27,7 +27,7 @@
                   <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
                   <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
                   <img src="./img/logo-sedona-mobile.svg"
-                    width="102"
+                    width="102" height="84"
                     alt="City of SEDONA (LOGO)">
                 </picture>
               </a>
@@ -36,19 +36,14 @@
             <li class="site-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
           </ul>
 
-          <button class="site-nav__toggler" type="button">
-            <span class="site-nav__toggler-inner">
+          <button class="site-nav__toggler" type="button" aria-label="Открыть/Закрыть меню сайта">
               <span class="site-nav__toggler-line"></span>
-              <span class="site-nav__toggler-line"></span>
-              <span class="site-nav__toggler-line"></span>
-            </span>
-
-            <span class="visually-hidden">Открыть/Закрыть меню сайта</span>
           </button>
         </nav>
 
         <div class="site-banner-small">
           <img src="./img/text-sedona.svg"
+            width="229" height="40"
             class="site-banner-small__content"
             alt="Welcome to the gorgeous Sedona!">
         </div>
@@ -60,7 +55,7 @@
 
           <p class="gallery__desc">
             Не можете решиться на путешествие из-за курса?
-            Фотографии помогут вам забыть о политике и экономике.
+            Фотографии помогут <br class="only-mobile">вам забыть о политике и экономике.
           </p>
 
           <ul class="gallery__list">
@@ -231,7 +226,7 @@
             <div class="player__panel">
               <button class="player__button  player__button--replay" type="button" aria-label="Перезапустить">
                 <svg width="16" height="20">
-                  <use xlink:href='./img/sprite.svg#player-replay'/>
+                  <use xlink:href='./img/sprite.svg#icon-video-replay'/>
                 </svg>
               </button>
 
@@ -243,13 +238,13 @@
 
               <button class="player__button  player__button--subtitles" type="button" aria-label="Субтитры">
                 <svg width="32" height="20">
-                  <use xlink:href='./img/sprite.svg#player-subtitles'/>
+                  <use xlink:href='./img/sprite.svg#icon-video-subtitles'/>
                 </svg>
               </button>
 
               <button class="player__button  player__button--fullscreen" type="button" aria-label="Развернуть">
                 <svg width="20" height="20">
-                  <use xlink:href='./img/sprite.svg#player-fullscreen'/>
+                  <use xlink:href='./img/sprite.svg#icon-video-fullscreen'/>
                 </svg>
               </button>
             </div>
@@ -291,8 +286,8 @@
             href="https://htmlacademy.ru/intensive/adaptive"
             aria-label="HtmlAcademy"
           >
-            <svg width="26.943px" height="34.09px">
-              <use xlink:href='./img/sprite.svg#htmlacademy-logo'/>
+            <svg width="27px" height="34px">
+              <use xlink:href='./img/sprite.svg#icon-logo-htmlacademy'/>
             </svg>
           </a>
         </div>

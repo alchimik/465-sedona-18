@@ -7,8 +7,13 @@
     fill: #000000;
   }
 
-  &:hover svg {
-    fill: #81b3d2;
+  &:hover,
+  &:focus {
+    outline: none;
+
+    svg {
+      fill: #81b3d2;
+    }
   }
 
   &:active svg {

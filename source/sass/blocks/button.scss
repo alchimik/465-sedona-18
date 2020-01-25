@@ -14,8 +14,11 @@
   text-decoration: none;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #669ec0;
+    cursor: pointer;
+    outline: none;
   }
 
   &:active {

@@ -1,9 +1,29 @@
 .index-page-intro {
   @include default-side-padding;
 
+  position: relative;
   padding-top: 40px;
-  padding-bottom: 27px;
+  padding-bottom: 44px;
   text-align: center;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: #81b3d2;
+    background-size: 100% auto;
+    padding-top: 5.3%;
+
+    @include for-tablet-and-desktop {
+      display: none;
+    }
+  }
 }
 
 .index-page-intro__title {
