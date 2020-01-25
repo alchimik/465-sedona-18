@@ -1,43 +1,77 @@
 .site-banner-big {
-  height: 389px;
-  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  position: relative;
+  background-color: #7f8d99;
   background-position: center bottom;
-  background-size: 768px auto, 768px 389px;
   background-repeat: no-repeat;
-  overflow: hidden;
 
-  @media (min-resolution: 1.5dppx) {
-    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+  @include for-mobile {
+    height: 389px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-size: 768px 389px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+    }
   }
 
   @include for-tablet {
-    height: 518px;
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
-    background-size: 768px auto, 768px 518px;
+    height: 517px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 768px 518px;
 
     @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
   @include for-desktop {
-    height: 518px;
-    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+    height: 517px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 1200px auto, 1200px 518px;
 
     @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    @include for-mobile {
+      background-image: url("../img/bg-intro-triangle-mobile.svg");
+      background-size: 101% auto;
+    }
+
+    @include for-tablet {
+      height: 65px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-size: 100% auto;
+    }
+
+    @include for-desktop {
+      height: 517px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-size: 1200px auto;
     }
   }
 }
 
 .site-banner-big__content {
   width: 281px;
-  margin: 89px auto 0 auto;
+  height: auto;
+  margin: 0 auto;
   display: block;
+  padding-top: 89px;
 
   @include for-tablet-and-desktop {
     width: 460px;
-    margin-top: 77px;
+    padding-top: 77px;
   }
 }

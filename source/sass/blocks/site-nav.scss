@@ -58,7 +58,8 @@
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -4px 4px 0 rgba(1, 1, 1, 0.2);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #669ec0;
   }
 
@@ -75,6 +76,7 @@
   transform: translate(-50%, 100%);
   bottom: 0;
   box-shadow: none;
+  z-index: 10;
 
   a {
     border: none;
@@ -88,7 +90,7 @@
 }
 
 .site-nav__toggler {
-  width: 60px;
+  width: 64px;
   height: 55px;
   background-color: transparent;
   position: absolute;
@@ -105,13 +107,8 @@
   }
 }
 
-.site-nav__toggler-inner {
-  margin: auto;
-  width: 23px;
-  height: 21px;
-  position: relative;
-}
-
+.site-nav__toggler::before,
+.site-nav__toggler::after,
 .site-nav__toggler-line {
   display: block;
   position: absolute;
@@ -119,41 +116,49 @@
   background-color: white;
   transition: all 0.5s;
   width: 0;
-
-  &:nth-of-type(1) {
-    top: 10px;
-    transform: rotate(45deg);
-    width: 29px;
-    height: 5px;
-    left: -3px;
-  }
-
-  &:nth-of-type(3) {
-    top: 10px;
-    transform: rotate(-45deg);
-    width: 29px;
-    height: 5px;
-    left: -3px;
-  }
 }
 
-.site-nav--closed .site-nav__toggler-line {
-  background-color: #81b3d2;
-  transform: rotate(0deg);
-  width: 22px;
-  height: 4px;
-  left: 0;
+.site-nav__toggler::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 29px;
+  height: 5px;
+}
 
-  &:nth-of-type(1) {
-    top: 0;
+.site-nav__toggler::after {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 29px;
+  height: 5px;
+}
+
+.site-nav--closed {
+  .site-nav__toggler::before,
+  .site-nav__toggler::after,
+  .site-nav__toggler-line {
+    background-color: #81b3d2;
+    width: 22px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
   }
 
-  &:nth-of-type(2) {
-    top: 9px;
+  .site-nav__toggler::before {
+    content: "";
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-9px);
   }
 
-  &:nth-of-type(3) {
-    top: 18px;
+  .site-nav__toggler-line {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+  }
+
+  .site-nav__toggler::after {
+    content: "";
+    transform: translate(-50%, -50%) rotate(0deg) translateY(9px);
   }
 }
 
@@ -202,7 +207,8 @@
       border: none;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
       color: #81b3d2;
     }
@@ -215,7 +221,8 @@
     &--active {
       color: #766357;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: #604e43;
       }
 
