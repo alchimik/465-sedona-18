@@ -13,6 +13,8 @@ var server = require('browser-sync').create();
 var del = require('del');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
+var htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
 
 gulp.task('clean', function () {
   return del('build');
@@ -23,18 +25,17 @@ gulp.task('copy', function () {
       'source/fonts/**/*.{woff,woff2}',
       'source/img/**',
       'source/*.ico',
-      'source/js/**',
+      'source/js/*.min.js',
     ], {
       base: 'source'
     }
   ).pipe(gulp.dest('build'));
 });
 
-gulp.task('copy_html', function () {
-  return gulp.src(
-    ['source/*.html'],
-    { base: 'source' }
-  ).pipe(gulp.dest('build'));
+gulp.task('html', function () {
+  return gulp.src(['source/*.html'], { base: 'source' })
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('css', function () {
@@ -52,23 +53,12 @@ gulp.task('css', function () {
     .pipe(server.stream());
 });
 
-gulp.task('server', function () {
-  server.init({
-    server: 'build/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
-  gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'refresh'));
-  gulp.watch('source/*.html', gulp.series('copy_html', 'refresh'));
-});
-
-gulp.task('refresh', function (done) {
-  server.reload();
-  done();
+gulp.task('js', function () {
+  return gulp.src('source/js/app.js')
+    .pipe(uglify())
+    .pipe(rename('app.min.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(server.stream());
 });
 
 gulp.task('images', function () {
@@ -96,5 +86,24 @@ gulp.task('webp', function () {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'copy_html', 'css', 'sprite', 'images'));
+gulp.task('server', function () {
+  server.init({
+    server: 'build/',
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
+  gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'refresh'));
+  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+});
+
+gulp.task('refresh', function (done) {
+  server.reload();
+  done();
+});
+
+gulp.task('build', gulp.series('clean', 'copy', 'html', 'css', 'js', 'sprite', 'images'));
 gulp.task('start', gulp.series('build', 'server'));
