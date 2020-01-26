@@ -87,6 +87,15 @@
     width: 102px;
     height: 83px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
 }
 
 .site-nav__toggler {
